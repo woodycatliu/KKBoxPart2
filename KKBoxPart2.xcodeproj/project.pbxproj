@@ -10,8 +10,8 @@
 		312ED6ACCD4D0E725EC454A1 /* Pods_KKBoxPart2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CE2DA325A95FBC8083858D /* Pods_KKBoxPart2.framework */; };
 		9653D39A8413E8A67DFACA60 /* Pods_KKBoxPart2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0365CF69A6A308A46EF4C22 /* Pods_KKBoxPart2Tests.framework */; };
 		C0815BFBED263A0B94A25C55 /* Pods_KKBoxPart2_KKBoxPart2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A512769557FA6F772A2FDD3 /* Pods_KKBoxPart2_KKBoxPart2UITests.framework */; };
-		EFAD50DC2863F17B00553B76 /* Rss.html in Resources */ = {isa = PBXBuildFile; fileRef = EFAD50DB2863F17B00553B76 /* Rss.html */; };
 		EFAD50DE2863F28600553B76 /* MWFeedParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */; };
+		EFAD50E02863F63300553B76 /* sounds.rss in Resources */ = {isa = PBXBuildFile; fileRef = EFAD50DF2863F63300553B76 /* sounds.rss */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -50,8 +50,8 @@
 		7AA74FF987D7101E8D959326 /* Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig"; path = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A512769557FA6F772A2FDD3 /* Pods_KKBoxPart2_KKBoxPart2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKBoxPart2_KKBoxPart2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0365CF69A6A308A46EF4C22 /* Pods_KKBoxPart2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKBoxPart2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFAD50DB2863F17B00553B76 /* Rss.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Rss.html; sourceTree = "<group>"; };
 		EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWFeedParserTest.swift; sourceTree = "<group>"; };
+		EFAD50DF2863F63300553B76 /* sounds.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sounds.rss; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			children = (
 				EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */,
 				EFD2C3A028631391000C4DA4 /* KKBoxPart2Tests.swift */,
-				EFAD50DB2863F17B00553B76 /* Rss.html */,
+				EFAD50DF2863F63300553B76 /* sounds.rss */,
 			);
 			path = KKBoxPart2Tests;
 			sourceTree = "<group>";
@@ -196,6 +196,7 @@
 				EFD2C38228631390000C4DA4 /* Sources */,
 				EFD2C38328631390000C4DA4 /* Frameworks */,
 				EFD2C38428631390000C4DA4 /* Resources */,
+				E1228B09FFBB27919C65B445 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +234,7 @@
 				EFD2C3A228631391000C4DA4 /* Sources */,
 				EFD2C3A328631391000C4DA4 /* Frameworks */,
 				EFD2C3A428631391000C4DA4 /* Resources */,
+				C152D6BFC83838063CC71B78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -302,7 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFAD50DC2863F17B00553B76 /* Rss.html in Resources */,
+				EFAD50E02863F63300553B76 /* sounds.rss in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +382,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C152D6BFC83838063CC71B78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1228B09FFBB27919C65B445 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

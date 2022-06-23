@@ -5,6 +5,9 @@ target 'KKBoxPart2' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
+    # pod 'MWFeedParser', :path => 'https://github.com/woodycatliu/MWFeedParser'
+   pod 'MWFeedParser', :path => '/Users/woody/Desktop/personal/KK/MWFeedParser'
+
   # Pods for KKBoxPart2
 
 
