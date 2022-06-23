@@ -1,5 +1,5 @@
 //
-//  MWFeedParserTest.swift
+//  KKParserTest.swift
 //  KKBoxPart2Tests
 //
 //  Created by Woody on 2022/6/23.
@@ -7,33 +7,27 @@
 
 import XCTest
 @testable import KKBoxPart2
-import MWFeedParser
 
-class MWFeedParserTest: XCTestCase {
+class KKParserTest: XCTestCase {
+    var parser: KKParser!
     
-    var items: [MWFeedItem] = []
-    
-    var info: MWFeedInfo!
-       
     override func setUp() {
         super.setUp()
         let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
-        let parser = MWFeedParser(feedURL: url)!
+        parser = KKParser(feedURL: url)!
         parser.delegate = self
         parser.parse()
-        items.removeAll()
-        info = nil
     }
     
     override func tearDown() {
+        parser = nil
         super.tearDown()
     }
     
-    
-    func testWhat() {
+    func test_Begin() {
     }
     
-    func test_MWFeedInfo(_ info: MWFeedInfo) {
+    func test_EpisodeInfo(_ info: EpisodeInfo) {
         XCTAssertNotNil(info.link, "link is nil")
         XCTAssertEqual(info.link!, "https://daodu.tech")
         XCTAssertNotNil(info.summary, "summary is nil")
@@ -43,7 +37,7 @@ class MWFeedParserTest: XCTestCase {
 
     }
     
-    func test_MWFeedItem(_ items: [MWFeedItem]) {
+    func test_EpisodeItems(_ items: [EpisodeItem]) {
         XCTAssertEqual(items.count, 148)
         let item1 = items.first!
         XCTAssertNotNil(item1.title, "item title is nil")
@@ -77,32 +71,17 @@ class MWFeedParserTest: XCTestCase {
     
 }
 
-
-extension MWFeedParserTest: MWFeedParserDelegate {
+extension KKParserTest: KKParserDelegate {
+    func feedParserDidFinish(_ info: EpisodeInfo!, items: [EpisodeItem]!) {
+        test_EpisodeInfo(info)
+        test_EpisodeItems(items)
+    }
     
-    func feedParserDidStart(_ parser: MWFeedParser!) {
+    func feedParserDidStart(_ parser: KKParser!) {
         
     }
     
-    func feedParser(_ parser: MWFeedParser!, didParseFeedInfo info: MWFeedInfo!) {
-        self.info = info
+    func feedParser(_ parser: KKParser!, didFailWithError error: Error!) {
+        print(error)
     }
-    
-    
-    func feedParser(_ parser: MWFeedParser!, didParseFeedItem item: MWFeedItem!) {
-        items.append(item)
-    }
-    
-    
-    func feedParser(_ parser: MWFeedParser!, didFailWithError error: Error!) {
-        print("error:", error)
-    }
-    
-    func feedParserDidFinish(_ parser: MWFeedParser!) {
-        test_MWFeedInfo(info)
-        test_MWFeedItem(items)
-    }
-    
-
-    
 }

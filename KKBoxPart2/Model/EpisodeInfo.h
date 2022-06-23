@@ -7,29 +7,23 @@
 
 #import <Foundation/Foundation.h>
 
-//@interface Music : NSObject <NSCoding>
-//
-//@property (nonatomic, copy) NSString *link;
-//@property (nonatomic, copy) NSString *type;
-//@property (nonatomic, copy) NSNumber * length;
-//@property (nonatomic, copy) NSNumber * duration;
-//
-//@end
 
-
-@interface EpospdeInfo : NSObject <NSCoding>
+@interface EpisodeInfo : NSObject <NSCoding> {
+    
+    NSString *title; // Feed title
+    NSString *link; // Feed link
+    NSString *summary; // Feed summary / description
+    NSURL *url; // Feed url
+    
+    // custom
+    NSString *image;
+    
+}
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *link;
-@property (nonatomic, copy) NSString *pubDate;
-@property (nonatomic, copy) NSString *guid;
-@property (nonatomic, copy) NSString *author;
-@property (nonatomic, copy) NSString *thumbnail;
-@property (nonatomic, copy) NSString *description;
-@property (nonatomic, copy) NSString *content;
-
+@property (nonatomic, copy) NSString *summary;
+@property (nonatomic, copy) NSURL *url;
+@property (nonatomic, copy) NSString *image;
 
 @end
-
-
-

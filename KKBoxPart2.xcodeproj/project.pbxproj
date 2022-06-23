@@ -12,6 +12,11 @@
 		C0815BFBED263A0B94A25C55 /* Pods_KKBoxPart2_KKBoxPart2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A512769557FA6F772A2FDD3 /* Pods_KKBoxPart2_KKBoxPart2UITests.framework */; };
 		EFAD50DE2863F28600553B76 /* MWFeedParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */; };
 		EFAD50E02863F63300553B76 /* sounds.rss in Resources */ = {isa = PBXBuildFile; fileRef = EFAD50DF2863F63300553B76 /* sounds.rss */; };
+		EFAD50EA2864652A00553B76 /* KKParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50E82864652A00553B76 /* KKParser.m */; };
+		EFAD50EC286465C300553B76 /* EpisodeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50EB286465C300553B76 /* EpisodeItem.m */; };
+		EFAD50EE2864662F00553B76 /* EpisodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50ED2864662F00553B76 /* EpisodeInfo.m */; };
+		EFAD50F02864724300553B76 /* KKParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50EF2864724300553B76 /* KKParserTest.swift */; };
+		EFAD50F32864848600553B76 /* Gobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50F22864848600553B76 /* Gobal.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -52,6 +57,13 @@
 		A0365CF69A6A308A46EF4C22 /* Pods_KKBoxPart2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KKBoxPart2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWFeedParserTest.swift; sourceTree = "<group>"; };
 		EFAD50DF2863F63300553B76 /* sounds.rss */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sounds.rss; sourceTree = "<group>"; };
+		EFAD50E7286459F400553B76 /* EpisodeItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EpisodeItem.h; sourceTree = "<group>"; };
+		EFAD50E82864652A00553B76 /* KKParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKParser.m; sourceTree = "<group>"; };
+		EFAD50E92864652A00553B76 /* KKParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKParser.h; sourceTree = "<group>"; };
+		EFAD50EB286465C300553B76 /* EpisodeItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EpisodeItem.m; sourceTree = "<group>"; };
+		EFAD50ED2864662F00553B76 /* EpisodeInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EpisodeInfo.m; sourceTree = "<group>"; };
+		EFAD50EF2864724300553B76 /* KKParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKParserTest.swift; sourceTree = "<group>"; };
+		EFAD50F22864848600553B76 /* Gobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gobal.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +77,7 @@
 		EFD2C3A628631391000C4DA4 /* KKBoxPart2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKBoxPart2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C3AA28631391000C4DA4 /* KKBoxPart2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKBoxPart2UITests.swift; sourceTree = "<group>"; };
 		EFD2C3AC28631391000C4DA4 /* KKBoxPart2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKBoxPart2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EFD2C3B928631463000C4DA4 /* EpisodeInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = EpisodeInfo.h; sourceTree = "<group>"; };
+		EFD2C3B928631463000C4DA4 /* EpisodeInfo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; path = EpisodeInfo.h; sourceTree = "<group>"; };
 		EFD2C3BC286316E2000C4DA4 /* XXBoxPart2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XXBoxPart2-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +132,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EFAD50F12864845100553B76 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EFAD50F22864848600553B76 /* Gobal.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		EFD2C37D28631390000C4DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +165,7 @@
 		EFD2C38828631390000C4DA4 /* KKBoxPart2 */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD50F12864845100553B76 /* Environment */,
 				EFD2C3BA28631561000C4DA4 /* Model */,
 				EFD2C38928631390000C4DA4 /* AppDelegate.swift */,
 				EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */,
@@ -162,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */,
+				EFAD50EF2864724300553B76 /* KKParserTest.swift */,
 				EFD2C3A028631391000C4DA4 /* KKBoxPart2Tests.swift */,
 				EFAD50DF2863F63300553B76 /* sounds.rss */,
 			);
@@ -180,7 +202,12 @@
 		EFD2C3BA28631561000C4DA4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EFAD50E7286459F400553B76 /* EpisodeItem.h */,
+				EFAD50EB286465C300553B76 /* EpisodeItem.m */,
 				EFD2C3B928631463000C4DA4 /* EpisodeInfo.h */,
+				EFAD50ED2864662F00553B76 /* EpisodeInfo.m */,
+				EFAD50E92864652A00553B76 /* KKParser.h */,
+				EFAD50E82864652A00553B76 /* KKParser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -425,6 +452,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAD50EC286465C300553B76 /* EpisodeItem.m in Sources */,
+				EFAD50EE2864662F00553B76 /* EpisodeInfo.m in Sources */,
+				EFAD50F32864848600553B76 /* Gobal.swift in Sources */,
+				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
 				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
 				EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
@@ -437,6 +468,7 @@
 			files = (
 				EFAD50DE2863F28600553B76 /* MWFeedParserTest.swift in Sources */,
 				EFD2C3A128631391000C4DA4 /* KKBoxPart2Tests.swift in Sources */,
+				EFAD50F02864724300553B76 /* KKParserTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
