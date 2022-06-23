@@ -1,0 +1,6 @@
+framework module Pods_KKBoxPart2Tests {
+  umbrella header "Pods-KKBoxPart2Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
