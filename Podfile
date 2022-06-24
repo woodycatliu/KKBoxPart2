@@ -7,6 +7,8 @@ target 'KKBoxPart2' do
 
     # pod 'MWFeedParser', :path => 'https://github.com/woodycatliu/MWFeedParser'
    pod 'MWFeedParser', :path => '/Users/woody/Desktop/personal/KK/MWFeedParser'
+   pod 'ModernAVPlayer'
+ 
 
   # Pods for KKBoxPart2
 
