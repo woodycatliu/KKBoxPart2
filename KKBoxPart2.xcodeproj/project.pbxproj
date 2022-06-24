@@ -33,6 +33,8 @@
 		EFFB19F9286572DB008FBC44 /* ModernConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19F8286572DB008FBC44 /* ModernConfig.swift */; };
 		EFFB19FC286594EB008FBC44 /* GobalPlayerContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19FB286594EB008FBC44 /* GobalPlayerContrller.swift */; };
 		EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19FD2865958A008FBC44 /* PodcastsPlayController.swift */; };
+		EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19FF28659F32008FBC44 /* KKParserExtension.swift */; };
+		EFFB1A022865A803008FBC44 /* KKParserPublisherTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB1A012865A803008FBC44 /* KKParserPublisherTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		EFFB19F8286572DB008FBC44 /* ModernConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernConfig.swift; sourceTree = "<group>"; };
 		EFFB19FB286594EB008FBC44 /* GobalPlayerContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GobalPlayerContrller.swift; sourceTree = "<group>"; };
 		EFFB19FD2865958A008FBC44 /* PodcastsPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsPlayController.swift; sourceTree = "<group>"; };
+		EFFB19FF28659F32008FBC44 /* KKParserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKParserExtension.swift; sourceTree = "<group>"; };
+		EFFB1A012865A803008FBC44 /* KKParserPublisherTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKParserPublisherTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 			children = (
 				EFAD50DD2863F28600553B76 /* MWFeedParserTest.swift */,
 				EFAD50EF2864724300553B76 /* KKParserTest.swift */,
+				EFFB1A012865A803008FBC44 /* KKParserPublisherTest.swift */,
 				EFD2C3A028631391000C4DA4 /* KKBoxPart2Tests.swift */,
 				EFAD50DF2863F63300553B76 /* sounds.rss */,
 			);
@@ -223,6 +228,7 @@
 				EFAD50ED2864662F00553B76 /* EpisodeInfo.m */,
 				EFAD50E92864652A00553B76 /* KKParser.h */,
 				EFAD50E82864652A00553B76 /* KKParser.m */,
+				EFFB19FF28659F32008FBC44 /* KKParserExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				EFFB19EF28654997008FBC44 /* PlayerController.swift in Sources */,
 				EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
+				EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +528,7 @@
 				EFAD50DE2863F28600553B76 /* MWFeedParserTest.swift in Sources */,
 				EFD2C3A128631391000C4DA4 /* KKBoxPart2Tests.swift in Sources */,
 				EFAD50F02864724300553B76 /* KKParserTest.swift in Sources */,
+				EFFB1A022865A803008FBC44 /* KKParserPublisherTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
