@@ -1,4 +1,7 @@
 PODS:
+  - ModernAVPlayer (1.7.3):
+    - ModernAVPlayer/Core (= 1.7.3)
+  - ModernAVPlayer/Core (1.7.3)
   - MWFeedParser (1.0.1):
     - MWFeedParser/FeedParser (= 1.0.1)
     - "MWFeedParser/NSDate+InternetDateTime (= 1.0.1)"
@@ -10,15 +13,21 @@ PODS:
   - "MWFeedParser/NSString+HTML (1.0.1)"
 
 DEPENDENCIES:
+  - ModernAVPlayer
   - MWFeedParser (from `/Users/woody/Desktop/personal/KK/MWFeedParser`)
+
+SPEC REPOS:
+  trunk:
+    - ModernAVPlayer
 
 EXTERNAL SOURCES:
   MWFeedParser:
     :path: "/Users/woody/Desktop/personal/KK/MWFeedParser"
 
 SPEC CHECKSUMS:
+  ModernAVPlayer: d04d53be7b620990250d0e13bee3be7217dc6214
   MWFeedParser: 3b7def9d9970c7340f450c5743a8c1cb27c00227
 
-PODFILE CHECKSUM: 3db2d41d149d3fafbfeca3a34db33a313ef7e4c7
+PODFILE CHECKSUM: bcf2490bcacc9f1ab125e97eb3d02e74a8d5fa89
 
 COCOAPODS: 1.11.3

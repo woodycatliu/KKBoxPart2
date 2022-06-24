@@ -7,113 +7,232 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09C72DA6005339C1680A3D31ED971109 /* ModernAVPlayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89EFB6217DBF07BB633240805FF44E96 /* ModernAVPlayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CAAF079C83CC6E55153391D53ABAE0A /* MWFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EB9BE8A686EB66AFBE6EA5D755DA95 /* MWFeedItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EFD800AC946DC98DAF2DC1E9B26C025 /* URLSessionDataTaskFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73D963F1B9C6578643AA3A3BA0CC6FA /* URLSessionDataTaskFactory.swift */; };
 		126F1C78C30631F787EB79D3F330A3FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		155DBD6C534148FF635F8D73EF8E8DC4 /* ModernAVPlayerRemoteCommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BC7E0F8B1D51A69860F76B0404416F /* ModernAVPlayerRemoteCommandFactory.swift */; };
+		19EC8A2A0AE6781EE14EEB62ACD17CED /* PlayerMediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6420C36B72415015D3F64900055F9FD2 /* PlayerMediaMetadata.swift */; };
 		1DE85AD807DA67720ABF2CF740FF35FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		2344A02BBB8A4693AF26A888A6D72AB2 /* Pods-KKBoxPart2Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1481AC84E7916AB40E57930E074F4DD /* Pods-KKBoxPart2Tests-dummy.m */; };
+		24910549C81EE895089D8CA4C6C1EA20 /* PlayerCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B7350621C418CC00DE9A9CF4292D17 /* PlayerCommand.swift */; };
 		261A3AF5EE36FFB0C72FA28AF329560C /* GTMNSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = A14712F915C1FBE24F4710221A5D5165 /* GTMNSString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		282B4760D7301536FB254867E061B2C9 /* ModernAVPlayerLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A767E5A384EB6831D3E93B15BE57D0C /* ModernAVPlayerLogger.swift */; };
+		288E05CABB501E73C4C468976DDC91EF /* TimerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309AA6A60EF0D8ACE22A442A788BFEAB /* TimerFactory.swift */; };
+		2B1AD01D3EBCD75C5D797479E23F6BF0 /* ModernAVPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF66E6DA438503103BAB2C7987280FF /* ModernAVPlayer-dummy.m */; };
 		391BABC0B24250D7EA3C074FB09D6AA1 /* Pods-KKBoxPart2Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0DC3040D537C29AACAE08ECDBF7BAB /* Pods-KKBoxPart2Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A1895287AAC7C5A68D1E21596F1A08C /* InitState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340D3F965B77F90449BF06E07E5CD32D /* InitState.swift */; };
+		3EC5EF1D8A7778A52D80E3F39C288B7E /* FailedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822094ED6174AC9921007F874ACE5F2 /* FailedState.swift */; };
 		4198EFAFE4500ECA157A26267DB28B82 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = CF2FF792F8CE2D03AA2566CBDB05FCBC /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		42CB8BE13A04240B0444CCBC5108BD15 /* NSDate+InternetDateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C4FDBF39FB5981211AF1FB23717FDC4 /* NSDate+InternetDateTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4458BD0707AB0AA06B67F6A8C7495C81 /* PlayerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C242D3E0610CB1FE7B43B5FA45742BBF /* PlayerConfiguration.swift */; };
+		4905E88AB241392917888398BFC6296E /* PlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E420FFF57F9D83D38E87D7F0226B775 /* PlayerError.swift */; };
+		4D3E505C90AF31A0CD3E584839C00BA1 /* PausedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C098D0FF86CE3D5DBAA15630EDEF3A65 /* PausedState.swift */; };
+		5C157D0B808A62A7A48C79C81E1681D2 /* ModernAVPlayerSeekService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37817B116D7F162FD6EB927B200D535C /* ModernAVPlayerSeekService.swift */; };
+		5FF280A16EF26703AFC262C2BFD8449A /* WaitingNetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FF811301B7D5D259E2577581AEA69 /* WaitingNetworkState.swift */; };
+		634BA74CEECB8E0EA2EF61F43552A5C1 /* AVPlayerItemInitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56C19E5A3C525F614216F33E34011B7 /* AVPlayerItemInitService.swift */; };
+		63ADBA9C78981A6722F1A931DE149FD1 /* AudioSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A6B91B8CF409B57DCCA413F3DABBB8 /* AudioSessionService.swift */; };
+		68D0BAAE503BB37875A2B5DAF18A59CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6C1EC74C02AAFE8156DC458CF309F513 /* ModernAVPlayerRemoteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0391B0CE5677C027EF0DED690775CB5A /* ModernAVPlayerRemoteCommand.swift */; };
+		732674AEF87538E78CFA9526631A2328 /* PlaybackObservingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E4E6F1C4FAD152C7D3C378BCC93885 /* PlaybackObservingService.swift */; };
+		737B7B9F425C8081657520BF2BAB1C2F /* ModernAVPlayerMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42982CB3438AD8234F507F54777D11E5 /* ModernAVPlayerMedia.swift */; };
 		74D219D84B5E5944C8689E4940E6013B /* NSString+HTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B404D8661E8E26DCB9C27446D5E14DC /* NSString+HTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E15C84DDAC7D5884FDD1AE4ECB40322 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB85DD2AFB79C693392CFE5B7E56BB /* ReachabilityService.swift */; };
 		7F51764AD6ADC2BAB001307CF9151804 /* MWFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CC8A0526D2AFACC83B429E48B3AA44 /* MWFeedParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		85A8276EF367869D4CF27D1558C0002B /* MWFeedParser.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C326A5D72D16563B6E13720FB6A44D /* MWFeedParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		867A0CD4B00EB5983CBD8999C8FA7D80 /* MWFeedParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BF41E791AAA9636B44AE635422C7D3 /* MWFeedParser-dummy.m */; };
-		8A626603BC3205A3226278918A4B8169 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		965E0BEF06BE27190737AE5C0573315E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		9E23ABEB8A3049736580BE48C44B8354 /* Pods-KKBoxPart2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D20912A5AC32BD9F10F21755FE5BCF /* Pods-KKBoxPart2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88A63F843ADCF76D322FE3C599418E95 /* ItemStatusObservingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B87EED8C5049BD97925963C389B3E8 /* ItemStatusObservingService.swift */; };
+		8C7D1B6D73937365C00432A0E347F5D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		95D8E8E807ED75B98C74236C6F7ECEAA /* ModernAVPlayerMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329BB6F0A7D7EEFDCFD75F9D8D16FE3 /* ModernAVPlayerMediaItem.swift */; };
+		9AE522293AAD5CE968E2A16F441D6E14 /* InterruptionAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43857784902D843B5EDABD58B4B8AB01 /* InterruptionAudioService.swift */; };
+		9E058B41BDAE542620AC119FACE5DBCC /* PlayerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DCE3534B18048FF82E1CB6FFE2AD68 /* PlayerPlugin.swift */; };
 		A11330BA81A61C153CE9C521627283F2 /* MWFeedInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B22AC6CE858A45B1856873BF813344 /* MWFeedInfo.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A42D9CB06D6EAFE96316025880BE80C0 /* PlayerMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ED9232DC1BB27525A02AF9F5C948B4 /* PlayerMediaItem.swift */; };
+		A455E2E75DB694643A186EC1B6148E6C /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB1094A00F5477A919CFFD2E380047E /* PlayingState.swift */; };
+		A472A077359C9EE1015D43F966DBB159 /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968924363B1BD396A47ABC0D53E1354E /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A796068593CBD6C8448F02AE067E7A40 /* ModernAVPlayerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D022F06645C7F934309C09622BE503F /* ModernAVPlayerConfiguration.swift */; };
+		A9654EBC67EA97830142F0C259FC38BC /* BufferingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303846687C6A66815DFA0AFF9FDFCF67 /* BufferingState.swift */; };
+		AA3D3A39247DB9ADA51943D81362DD7F /* LoadingMediaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2E87F8E1F80A60F0C85528B3DF04D1 /* LoadingMediaState.swift */; };
 		AB2CE84B77DF111967EACB97C560F887 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = C62EC0D15003FFAC7EA497FD4CEB2496 /* NSDate+InternetDateTime.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AC2B10393BD6F96BE2E1B6BB524A4A84 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20180D7EA17A356DD0D4E08B920E33E2 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m */; };
-		B04378E04D4E896F2E5EFED035E513D4 /* Pods-KKBoxPart2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B449BFD030BB165015A5C9BD091970 /* Pods-KKBoxPart2-dummy.m */; };
+		B1D0939B44EBD87ED6C3644D74FF71A2 /* ModernAVPlayerLoggerDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7538FB5EEC25EA389CEC25962BEF4C6 /* ModernAVPlayerLoggerDomain.swift */; };
+		B2B76443FB1A4D73981AC0F74551227B /* PlayerMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AE04D107CA4CA8B710CA99DF475509 /* PlayerMedia.swift */; };
+		B76F78A575F7780032616910EF90D2DA /* RouteAudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD183B5F2F06ABADC5E870CCE5BF76A5 /* RouteAudioService.swift */; };
+		BB3731B7BC8C2A9670550A6A5B423C5F /* ModernAVPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D049004DD29D552E3BC2F045938E85 /* ModernAVPlayerDelegate.swift */; };
+		BE70CBE11C1BFEB9CD1FCBA7B8A9D93A /* ModernAVPlayerCurrentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C497E7E42C2FED91FEE66F39E3DF7 /* ModernAVPlayerCurrentState.swift */; };
 		C5050A07CA886B0A993B625702A484B8 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BC14CA7A695CE3BD1AB2FE74717CCC /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C895302F992F360B3309056C6A61AE78 /* Pods-KKBoxPart2-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B449BFD030BB165015A5C9BD091970 /* Pods-KKBoxPart2-dummy.m */; };
+		CC565009280F29B473DD18D357C67E57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CE39F7E8CCC34C0D2B19C56CFFD0FE69 /* NowPlayingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C77D5CF77DF9A60E6D2CE24376467 /* NowPlayingService.swift */; };
+		CE7E65607396253F4608E7EC9CFF9A63 /* LoadedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFDAE6D1C271330B1C7DAD824E384A /* LoadedState.swift */; };
+		D099C2A2C0E98B94D8C542BACD2E5AB4 /* PlayerContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06101A444F2D91194FA685C2FEF34578 /* PlayerContext.swift */; };
 		D0B211BC2270A9167C3E1BD63D9A359F /* MWFeedInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 64114B1236872F7FF18151E974978737 /* MWFeedInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA010D747091B8C50B5BE8D8E30AA819 /* MWFeedParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00531137FEB65BD47A866CF6BC8E77AD /* MWFeedParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E035BD516D16463E6AD134F2259CDD25 /* RateObservingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FBD10925412C060887D79694FB07BD /* RateObservingService.swift */; };
+		E139E5E513EF3D4BAFC1B69F6E081DFC /* MediaPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7757B18D08FEC894CAEA55B405F6A3F /* MediaPlayer.swift */; };
+		E191D2CCC88E7BAE7689EB1F0AA08353 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20180D7EA17A356DD0D4E08B920E33E2 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m */; };
 		E3B957CC7A44763DEEF057EA5F55FFF0 /* MWFeedParser_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9322EA2C2763D972C8BD1ACF136DB9EE /* MWFeedParser_Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC86EED875D1F192CAD156C9C35CCDBE /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 968924363B1BD396A47ABC0D53E1354E /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3E5CDBB52C33ABED333741295D24FD0 /* ModernAVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CD8AD8BD9EF4440EA3C818B8B9621E /* ModernAVPlayer.swift */; };
+		E677F043639FFDF07CBDA37C2A0AECDC /* Pods-KKBoxPart2-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D20912A5AC32BD9F10F21755FE5BCF /* Pods-KKBoxPart2-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7189A1D9FE691D0DE70020A6070B61 /* StoppedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F299AA9498166EAAB5B62343BA608378 /* StoppedState.swift */; };
+		EEFE1B5B0C344AB0EE8762EA20D594D2 /* MediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AE6331CFCDE4B3235F1121F2E8C764 /* MediaType.swift */; };
+		EF09044FEFB85A560E4BC896DE7DBCCE /* PlayerUnavailableActionReason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256011B72C54F1DD0A6DBB4E269271D1 /* PlayerUnavailableActionReason.swift */; };
+		EF91E74E49F86C770329321079889331 /* ModernAVPlayerExposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1287706E07710CF2C86F8BEA57EE3A9A /* ModernAVPlayerExposable.swift */; };
+		FC6C35B4A4E2C8EFB25F721AE3E2ECCE /* CustomAudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2634F8A3A8D0A203F738B3ED8BFB58 /* CustomAudioSession.swift */; };
 		FDF56B9F71997D15FE91FE5AB0AFB9F7 /* MWFeedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = AC5E84D4759254A6750370C022F40040 /* MWFeedItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE2510CADEA9511F7F8FD1765CE3DEE7 /* PlayerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF6E4D3B3FCA2089A2CD6E7E383FDB6 /* PlayerState.swift */; };
+		FF54E7463070EBB86F108D74D9472B3C /* ModernAVPlayerMediaMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0757A3A34CF04D8916BF72129823CE5B /* ModernAVPlayerMediaMetadata.swift */; };
+		FF9CA47D89C081DE307CA3793E1E8A13 /* AVPlayerRemoteCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41FBA83620FA26FACD149B5E0227CF /* AVPlayerRemoteCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9AA8C9A0CB6A39001383DB55101EC274 /* PBXContainerItemProxy */ = {
+		0F08F107A1035BA2E5AFA50F7098ED07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 21F2865133E605B4032F35A018E217A9;
 			remoteInfo = MWFeedParser;
 		};
-		B832D73EA5DB871D54EC3F9E803D06E2 /* PBXContainerItemProxy */ = {
+		30D8936F8E9B4F5149AB0259CCA81BBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15B077CFE362BA7DE3A1498A40F8076D;
+			remoteInfo = ModernAVPlayer;
+		};
+		4065A03274448332969CF9A1909D2EFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21F2865133E605B4032F35A018E217A9;
+			remoteInfo = MWFeedParser;
+		};
+		DD3D20293095181C870C2BAF38AAE90B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7A8982354AF15E07B0C99834803BB309;
 			remoteInfo = "Pods-KKBoxPart2";
 		};
-		E9F108E09E5B77C104210594CBB6A050 /* PBXContainerItemProxy */ = {
+		E791A9F8369333B64502058E654F2A16 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 21F2865133E605B4032F35A018E217A9;
-			remoteInfo = MWFeedParser;
+			remoteGlobalIDString = 15B077CFE362BA7DE3A1498A40F8076D;
+			remoteInfo = ModernAVPlayer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00531137FEB65BD47A866CF6BC8E77AD /* MWFeedParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWFeedParser-umbrella.h"; sourceTree = "<group>"; };
+		01A6B91B8CF409B57DCCA413F3DABBB8 /* AudioSessionService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudioSessionService.swift; path = Sources/Core/Services/AudioSessionService.swift; sourceTree = "<group>"; };
+		02AE6331CFCDE4B3235F1121F2E8C764 /* MediaType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaType.swift; path = Sources/Core/Components/MediaType.swift; sourceTree = "<group>"; };
+		0391B0CE5677C027EF0DED690775CB5A /* ModernAVPlayerRemoteCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerRemoteCommand.swift; path = Sources/Core/Components/RemoteCommand/ModernAVPlayerRemoteCommand.swift; sourceTree = "<group>"; };
+		03E4E6F1C4FAD152C7D3C378BCC93885 /* PlaybackObservingService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaybackObservingService.swift; path = Sources/Core/Services/PlaybackObservingService.swift; sourceTree = "<group>"; };
+		06101A444F2D91194FA685C2FEF34578 /* PlayerContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerContext.swift; path = Sources/Core/Components/PlayerContext.swift; sourceTree = "<group>"; };
+		0757A3A34CF04D8916BF72129823CE5B /* ModernAVPlayerMediaMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerMediaMetadata.swift; path = Sources/Core/Components/ModernAVPlayerMediaMetadata.swift; sourceTree = "<group>"; };
 		0AB433693F9650925C6BCC451BEF7AD2 /* Pods-KKBoxPart2-KKBoxPart2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2-KKBoxPart2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		0C2E87F8E1F80A60F0C85528B3DF04D1 /* LoadingMediaState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingMediaState.swift; path = Sources/Core/State/LoadingMediaState.swift; sourceTree = "<group>"; };
 		0E0DC3040D537C29AACAE08ECDBF7BAB /* Pods-KKBoxPart2Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKBoxPart2Tests-umbrella.h"; sourceTree = "<group>"; };
+		0E420FFF57F9D83D38E87D7F0226B775 /* PlayerError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerError.swift; path = Sources/Core/Components/PlayerError.swift; sourceTree = "<group>"; };
+		1287706E07710CF2C86F8BEA57EE3A9A /* ModernAVPlayerExposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerExposable.swift; path = Sources/Core/Components/ModernAVPlayerExposable.swift; sourceTree = "<group>"; };
 		1531A4BAC93630B17EF8975482DDB3D1 /* MWFeedParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MWFeedParser.release.xcconfig; sourceTree = "<group>"; };
 		1B36110C2FF5563575F2C26999AD5C20 /* Pods-KKBoxPart2-KKBoxPart2UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KKBoxPart2-KKBoxPart2UITests.modulemap"; sourceTree = "<group>"; };
 		1B6A3C919D75C09F8661A3FEA00BA180 /* Pods-KKBoxPart2Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KKBoxPart2Tests.modulemap"; sourceTree = "<group>"; };
+		1B7C77D5CF77DF9A60E6D2CE24376467 /* NowPlayingService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NowPlayingService.swift; path = Sources/Core/Services/NowPlayingService.swift; sourceTree = "<group>"; };
 		1C4690DD0179EDFB7FB61E30DCC8BC29 /* Pods-KKBoxPart2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1FB87CC669ADEFE47E858A9577D227E8 /* Pods-KKBoxPart2-KKBoxPart2UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKBoxPart2-KKBoxPart2UITests-frameworks.sh"; sourceTree = "<group>"; };
 		20180D7EA17A356DD0D4E08B920E33E2 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m"; sourceTree = "<group>"; };
+		20AE04D107CA4CA8B710CA99DF475509 /* PlayerMedia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerMedia.swift; path = Sources/Core/Components/PlayerMedia.swift; sourceTree = "<group>"; };
 		23235DC8A874DA5BE3E7120971D65F62 /* Pods-KKBoxPart2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2.release.xcconfig"; sourceTree = "<group>"; };
+		256011B72C54F1DD0A6DBB4E269271D1 /* PlayerUnavailableActionReason.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerUnavailableActionReason.swift; path = Sources/Core/Components/PlayerUnavailableActionReason.swift; sourceTree = "<group>"; };
 		28B22AC6CE858A45B1856873BF813344 /* MWFeedInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedInfo.m; path = Classes/MWFeedInfo.m; sourceTree = "<group>"; };
 		29A9DCA60A5D266644D5AC62416F446B /* Pods-KKBoxPart2-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2-Info.plist"; sourceTree = "<group>"; };
 		2C4FDBF39FB5981211AF1FB23717FDC4 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+InternetDateTime.h"; path = "Classes/NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		303846687C6A66815DFA0AFF9FDFCF67 /* BufferingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BufferingState.swift; path = Sources/Core/State/BufferingState.swift; sourceTree = "<group>"; };
+		309AA6A60EF0D8ACE22A442A788BFEAB /* TimerFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimerFactory.swift; path = Sources/Core/Components/TimerFactory.swift; sourceTree = "<group>"; };
 		30EB9BE8A686EB66AFBE6EA5D755DA95 /* MWFeedItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedItem.m; path = Classes/MWFeedItem.m; sourceTree = "<group>"; };
 		3263B36DBDF0D860202C21468F079D56 /* Pods-KKBoxPart2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2-acknowledgements.plist"; sourceTree = "<group>"; };
+		32DCE3534B18048FF82E1CB6FFE2AD68 /* PlayerPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerPlugin.swift; path = Sources/Core/Components/PlayerPlugin.swift; sourceTree = "<group>"; };
+		340D3F965B77F90449BF06E07E5CD32D /* InitState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InitState.swift; path = Sources/Core/State/InitState.swift; sourceTree = "<group>"; };
+		37817B116D7F162FD6EB927B200D535C /* ModernAVPlayerSeekService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerSeekService.swift; path = Sources/Core/Services/ModernAVPlayerSeekService.swift; sourceTree = "<group>"; };
+		3B603AB2BC061FFE0F0633B46119856A /* ModernAVPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ModernAVPlayer.debug.xcconfig; sourceTree = "<group>"; };
 		3EDD542D7D104E7BB99D858A35C2229F /* Pods-KKBoxPart2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2.debug.xcconfig"; sourceTree = "<group>"; };
+		42982CB3438AD8234F507F54777D11E5 /* ModernAVPlayerMedia.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerMedia.swift; path = Sources/Core/Components/ModernAVPlayerMedia.swift; sourceTree = "<group>"; };
+		43857784902D843B5EDABD58B4B8AB01 /* InterruptionAudioService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterruptionAudioService.swift; path = Sources/Core/Services/InterruptionAudioService.swift; sourceTree = "<group>"; };
+		4510A45FBF26D4B9916A651133164D0D /* ModernAVPlayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ModernAVPlayer.modulemap; sourceTree = "<group>"; };
 		4538B4BE5A605B08356357C1C9A391F3 /* MWFeedParser.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MWFeedParser.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		46C8304D664180E456525D726D72B6D1 /* Pods-KKBoxPart2Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		46D20912A5AC32BD9F10F21755FE5BCF /* Pods-KKBoxPart2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKBoxPart2-umbrella.h"; sourceTree = "<group>"; };
 		48BC14CA7A695CE3BD1AB2FE74717CCC /* NSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "Classes/NSString+HTML.m"; sourceTree = "<group>"; };
 		48BF41E791AAA9636B44AE635422C7D3 /* MWFeedParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MWFeedParser-dummy.m"; sourceTree = "<group>"; };
+		4A767E5A384EB6831D3E93B15BE57D0C /* ModernAVPlayerLogger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerLogger.swift; path = Sources/Core/Services/ModernAVPlayerLogger.swift; sourceTree = "<group>"; };
 		505F3A176B7009F4CC3FFE5FF0B5BF3D /* Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		57E2066FCB4A501AEF7680AE47A3A4DA /* Pods-KKBoxPart2.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-KKBoxPart2.modulemap"; sourceTree = "<group>"; };
 		580D5F671281D3AB57B8C9FD2D04EAD9 /* Pods-KKBoxPart2Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KKBoxPart2Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5978D92CA59D2DB8D39D77448C6F3F5D /* ModernAVPlayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ModernAVPlayer-Info.plist"; sourceTree = "<group>"; };
+		5AF66E6DA438503103BAB2C7987280FF /* ModernAVPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ModernAVPlayer-dummy.m"; sourceTree = "<group>"; };
 		5C97E501FFA54A9A302906D1F4D9B57C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		63FBD10925412C060887D79694FB07BD /* RateObservingService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RateObservingService.swift; path = Sources/Core/Services/RateObservingService.swift; sourceTree = "<group>"; };
 		64114B1236872F7FF18151E974978737 /* MWFeedInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedInfo.h; path = Classes/MWFeedInfo.h; sourceTree = "<group>"; };
+		6420C36B72415015D3F64900055F9FD2 /* PlayerMediaMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerMediaMetadata.swift; path = Sources/Core/Components/PlayerMediaMetadata.swift; sourceTree = "<group>"; };
+		64D049004DD29D552E3BC2F045938E85 /* ModernAVPlayerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerDelegate.swift; path = Sources/Core/ModernAVPlayerDelegate.swift; sourceTree = "<group>"; };
 		67100B2726CFE375C782CB2876CE7D45 /* Pods-KKBoxPart2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKBoxPart2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6C51898CFE9540F287AC8036D99A68E7 /* ModernAVPlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ModernAVPlayer.release.xcconfig; sourceTree = "<group>"; };
+		6CC202F073471166068C9D9628E12797 /* ModernAVPlayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ModernAVPlayer-prefix.pch"; sourceTree = "<group>"; };
+		6FF6E4D3B3FCA2089A2CD6E7E383FDB6 /* PlayerState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerState.swift; path = Sources/Core/Components/PlayerState.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7329BB6F0A7D7EEFDCFD75F9D8D16FE3 /* ModernAVPlayerMediaItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerMediaItem.swift; path = Sources/Core/Components/ModernAVPlayerMediaItem.swift; sourceTree = "<group>"; };
 		745426059D4BA3B6F7DB2263C2374B3F /* MWFeedParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MWFeedParser-Info.plist"; sourceTree = "<group>"; };
 		74756D33C2A7403CEE7A03E1A6C41659 /* Pods-KKBoxPart2Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2Tests-Info.plist"; sourceTree = "<group>"; };
 		77F5B428EAA7312BCC452943A21194C7 /* Pods-KKBoxPart2-KKBoxPart2UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KKBoxPart2-KKBoxPart2UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7A3186D33A613170D0658ED5210108CB /* Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist"; sourceTree = "<group>"; };
+		7BEB85DD2AFB79C693392CFE5B7E56BB /* ReachabilityService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReachabilityService.swift; path = Sources/Core/Services/ReachabilityService.swift; sourceTree = "<group>"; };
+		86ED9232DC1BB27525A02AF9F5C948B4 /* PlayerMediaItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerMediaItem.swift; path = Sources/Core/Components/PlayerMediaItem.swift; sourceTree = "<group>"; };
+		8822094ED6174AC9921007F874ACE5F2 /* FailedState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailedState.swift; path = Sources/Core/State/FailedState.swift; sourceTree = "<group>"; };
+		89EFB6217DBF07BB633240805FF44E96 /* ModernAVPlayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ModernAVPlayer-umbrella.h"; sourceTree = "<group>"; };
 		9322EA2C2763D972C8BD1ACF136DB9EE /* MWFeedParser_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedParser_Private.h; path = Classes/MWFeedParser_Private.h; sourceTree = "<group>"; };
 		968924363B1BD396A47ABC0D53E1354E /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h"; sourceTree = "<group>"; };
 		9B404D8661E8E26DCB9C27446D5E14DC /* NSString+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "Classes/NSString+HTML.h"; sourceTree = "<group>"; };
+		9D022F06645C7F934309C09622BE503F /* ModernAVPlayerConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerConfiguration.swift; path = Sources/Core/Components/ModernAVPlayerConfiguration.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F41FBA83620FA26FACD149B5E0227CF /* AVPlayerRemoteCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVPlayerRemoteCommand.swift; path = Sources/Core/Components/RemoteCommand/AVPlayerRemoteCommand.swift; sourceTree = "<group>"; };
 		A14712F915C1FBE24F4710221A5D5165 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "Classes/GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		A7757B18D08FEC894CAEA55B405F6A3F /* MediaPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MediaPlayer.swift; path = Sources/Core/Components/MediaPlayer.swift; sourceTree = "<group>"; };
 		AC5E84D4759254A6750370C022F40040 /* MWFeedItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedItem.h; path = Classes/MWFeedItem.h; sourceTree = "<group>"; };
+		AF2634F8A3A8D0A203F738B3ED8BFB58 /* CustomAudioSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomAudioSession.swift; path = Sources/Core/Components/CustomAudioSession.swift; sourceTree = "<group>"; };
+		B4B7350621C418CC00DE9A9CF4292D17 /* PlayerCommand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerCommand.swift; path = Sources/Core/Components/PlayerCommand.swift; sourceTree = "<group>"; };
+		B4CD8AD8BD9EF4440EA3C818B8B9621E /* ModernAVPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayer.swift; path = Sources/Core/ModernAVPlayer.swift; sourceTree = "<group>"; };
+		B814601061A9C207CDD6FFD73E53880E /* ModernAVPlayer */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ModernAVPlayer; path = ModernAVPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD97669BB866903689E26E7A8887A4C1 /* MWFeedParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MWFeedParser-prefix.pch"; sourceTree = "<group>"; };
+		C098D0FF86CE3D5DBAA15630EDEF3A65 /* PausedState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PausedState.swift; path = Sources/Core/State/PausedState.swift; sourceTree = "<group>"; };
 		C0C326A5D72D16563B6E13720FB6A44D /* MWFeedParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MWFeedParser.h; path = Classes/MWFeedParser.h; sourceTree = "<group>"; };
+		C17C497E7E42C2FED91FEE66F39E3DF7 /* ModernAVPlayerCurrentState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerCurrentState.swift; path = Sources/Core/Components/ModernAVPlayerCurrentState.swift; sourceTree = "<group>"; };
+		C242D3E0610CB1FE7B43B5FA45742BBF /* PlayerConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayerConfiguration.swift; path = Sources/Core/Components/PlayerConfiguration.swift; sourceTree = "<group>"; };
+		C3FFDAE6D1C271330B1C7DAD824E384A /* LoadedState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadedState.swift; path = Sources/Core/State/LoadedState.swift; sourceTree = "<group>"; };
 		C62EC0D15003FFAC7EA497FD4CEB2496 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+InternetDateTime.m"; path = "Classes/NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		CD183B5F2F06ABADC5E870CCE5BF76A5 /* RouteAudioService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RouteAudioService.swift; path = Sources/Core/Services/RouteAudioService.swift; sourceTree = "<group>"; };
 		CD62DA10F62ABA0363A0B4D0517C9038 /* Pods-KKBoxPart2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-KKBoxPart2-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CF2FF792F8CE2D03AA2566CBDB05FCBC /* GTMNSString+HTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "Classes/GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		D0CC8A0526D2AFACC83B429E48B3AA44 /* MWFeedParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MWFeedParser.m; path = Classes/MWFeedParser.m; sourceTree = "<group>"; };
 		D1481AC84E7916AB40E57930E074F4DD /* Pods-KKBoxPart2Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKBoxPart2Tests-dummy.m"; sourceTree = "<group>"; };
+		D2B87EED8C5049BD97925963C389B3E8 /* ItemStatusObservingService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemStatusObservingService.swift; path = Sources/Core/Services/ItemStatusObservingService.swift; sourceTree = "<group>"; };
+		D64FF811301B7D5D259E2577581AEA69 /* WaitingNetworkState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaitingNetworkState.swift; path = Sources/Core/State/WaitingNetworkState.swift; sourceTree = "<group>"; };
+		D7538FB5EEC25EA389CEC25962BEF4C6 /* ModernAVPlayerLoggerDomain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerLoggerDomain.swift; path = Sources/Core/Components/ModernAVPlayerLoggerDomain.swift; sourceTree = "<group>"; };
 		D94B464220A905372EEF474ED21D7240 /* Pods-KKBoxPart2 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KKBoxPart2"; path = Pods_KKBoxPart2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFEEBF552895CEC9CF1C34CEDCB1A6D /* Pods-KKBoxPart2Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KKBoxPart2Tests"; path = Pods_KKBoxPart2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC3FCE7FE02EC73B38D4A4C2A717535 /* MWFeedParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MWFeedParser.modulemap; sourceTree = "<group>"; };
 		E0E829DD14DCD6038A50845C4B6AB3DC /* Pods-KKBoxPart2-KKBoxPart2UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KKBoxPart2-KKBoxPart2UITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		E1ABDCC6EA0DCFC61EFA309B231B76F8 /* MWFeedParser */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MWFeedParser; path = MWFeedParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BC7E0F8B1D51A69860F76B0404416F /* ModernAVPlayerRemoteCommandFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModernAVPlayerRemoteCommandFactory.swift; path = Sources/Core/Components/RemoteCommand/ModernAVPlayerRemoteCommandFactory.swift; sourceTree = "<group>"; };
 		EB738942E9F442C337D798C8072B529E /* Pods-KKBoxPart2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-KKBoxPart2-frameworks.sh"; sourceTree = "<group>"; };
 		ED1F4A74170DB0948F00543721D80C57 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		F299AA9498166EAAB5B62343BA608378 /* StoppedState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StoppedState.swift; path = Sources/Core/State/StoppedState.swift; sourceTree = "<group>"; };
 		F2B449BFD030BB165015A5C9BD091970 /* Pods-KKBoxPart2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKBoxPart2-dummy.m"; sourceTree = "<group>"; };
 		F2FC66E3360ABDDB67360E0272F88133 /* MWFeedParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MWFeedParser.debug.xcconfig; sourceTree = "<group>"; };
 		F458FBC70AC8ED534769A896ACFFFCBE /* Pods-KKBoxPart2-KKBoxPart2UITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-KKBoxPart2-KKBoxPart2UITests"; path = Pods_KKBoxPart2_KKBoxPart2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F56C19E5A3C525F614216F33E34011B7 /* AVPlayerItemInitService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AVPlayerItemInitService.swift; path = Sources/Core/Services/AVPlayerItemInitService.swift; sourceTree = "<group>"; };
+		F73D963F1B9C6578643AA3A3BA0CC6FA /* URLSessionDataTaskFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLSessionDataTaskFactory.swift; path = Sources/Core/Components/URLSessionDataTaskFactory.swift; sourceTree = "<group>"; };
+		FDB1094A00F5477A919CFFD2E380047E /* PlayingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlayingState.swift; path = Sources/Core/State/PlayingState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,19 +244,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E237A98C26B9783E367B4EFAB7EBB2B /* Frameworks */ = {
+		548088182363C66220B4C014DB9757AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A626603BC3205A3226278918A4B8169 /* Foundation.framework in Frameworks */,
+				CC565009280F29B473DD18D357C67E57 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BA6295F0198ECCBD6DE678B7472C7DC /* Frameworks */ = {
+		A15BDD4140ED5E4DB2C0541B55701BB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				965E0BEF06BE27190737AE5C0573315E /* Foundation.framework in Frameworks */,
+				8C7D1B6D73937365C00432A0E347F5D6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,18 +268,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DE6E7ED6875A8C63C0DB5A9B66C4066D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D0BAAE503BB37875A2B5DAF18A59CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3CA03FAD1DCBE3A63C34070F074ABE7B /* Products */ = {
+		11407D8BB6E451FB92F00075FA1EFED3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				B814601061A9C207CDD6FFD73E53880E /* ModernAVPlayer */,
 				E1ABDCC6EA0DCFC61EFA309B231B76F8 /* MWFeedParser */,
 				D94B464220A905372EEF474ED21D7240 /* Pods-KKBoxPart2 */,
 				F458FBC70AC8ED534769A896ACFFFCBE /* Pods-KKBoxPart2-KKBoxPart2UITests */,
 				DAFEEBF552895CEC9CF1C34CEDCB1A6D /* Pods-KKBoxPart2Tests */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2CB9B075D8BC1DC8E027E57D63D3BB58 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4510A45FBF26D4B9916A651133164D0D /* ModernAVPlayer.modulemap */,
+				5AF66E6DA438503103BAB2C7987280FF /* ModernAVPlayer-dummy.m */,
+				5978D92CA59D2DB8D39D77448C6F3F5D /* ModernAVPlayer-Info.plist */,
+				6CC202F073471166068C9D9628E12797 /* ModernAVPlayer-prefix.pch */,
+				89EFB6217DBF07BB633240805FF44E96 /* ModernAVPlayer-umbrella.h */,
+				3B603AB2BC061FFE0F0633B46119856A /* ModernAVPlayer.debug.xcconfig */,
+				6C51898CFE9540F287AC8036D99A68E7 /* ModernAVPlayer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ModernAVPlayer";
 			sourceTree = "<group>";
 		};
 		45F3416DD429BB9D0FB461F5AAA15F6A /* Pods-KKBoxPart2-KKBoxPart2UITests */ = {
@@ -178,6 +321,60 @@
 			);
 			name = "Pods-KKBoxPart2-KKBoxPart2UITests";
 			path = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests";
+			sourceTree = "<group>";
+		};
+		53FF4B12295039F4A5471BB01B6B0409 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				01A6B91B8CF409B57DCCA413F3DABBB8 /* AudioSessionService.swift */,
+				F56C19E5A3C525F614216F33E34011B7 /* AVPlayerItemInitService.swift */,
+				9F41FBA83620FA26FACD149B5E0227CF /* AVPlayerRemoteCommand.swift */,
+				303846687C6A66815DFA0AFF9FDFCF67 /* BufferingState.swift */,
+				AF2634F8A3A8D0A203F738B3ED8BFB58 /* CustomAudioSession.swift */,
+				8822094ED6174AC9921007F874ACE5F2 /* FailedState.swift */,
+				340D3F965B77F90449BF06E07E5CD32D /* InitState.swift */,
+				43857784902D843B5EDABD58B4B8AB01 /* InterruptionAudioService.swift */,
+				D2B87EED8C5049BD97925963C389B3E8 /* ItemStatusObservingService.swift */,
+				C3FFDAE6D1C271330B1C7DAD824E384A /* LoadedState.swift */,
+				0C2E87F8E1F80A60F0C85528B3DF04D1 /* LoadingMediaState.swift */,
+				A7757B18D08FEC894CAEA55B405F6A3F /* MediaPlayer.swift */,
+				02AE6331CFCDE4B3235F1121F2E8C764 /* MediaType.swift */,
+				B4CD8AD8BD9EF4440EA3C818B8B9621E /* ModernAVPlayer.swift */,
+				9D022F06645C7F934309C09622BE503F /* ModernAVPlayerConfiguration.swift */,
+				C17C497E7E42C2FED91FEE66F39E3DF7 /* ModernAVPlayerCurrentState.swift */,
+				64D049004DD29D552E3BC2F045938E85 /* ModernAVPlayerDelegate.swift */,
+				1287706E07710CF2C86F8BEA57EE3A9A /* ModernAVPlayerExposable.swift */,
+				4A767E5A384EB6831D3E93B15BE57D0C /* ModernAVPlayerLogger.swift */,
+				D7538FB5EEC25EA389CEC25962BEF4C6 /* ModernAVPlayerLoggerDomain.swift */,
+				42982CB3438AD8234F507F54777D11E5 /* ModernAVPlayerMedia.swift */,
+				7329BB6F0A7D7EEFDCFD75F9D8D16FE3 /* ModernAVPlayerMediaItem.swift */,
+				0757A3A34CF04D8916BF72129823CE5B /* ModernAVPlayerMediaMetadata.swift */,
+				0391B0CE5677C027EF0DED690775CB5A /* ModernAVPlayerRemoteCommand.swift */,
+				E7BC7E0F8B1D51A69860F76B0404416F /* ModernAVPlayerRemoteCommandFactory.swift */,
+				37817B116D7F162FD6EB927B200D535C /* ModernAVPlayerSeekService.swift */,
+				1B7C77D5CF77DF9A60E6D2CE24376467 /* NowPlayingService.swift */,
+				C098D0FF86CE3D5DBAA15630EDEF3A65 /* PausedState.swift */,
+				03E4E6F1C4FAD152C7D3C378BCC93885 /* PlaybackObservingService.swift */,
+				B4B7350621C418CC00DE9A9CF4292D17 /* PlayerCommand.swift */,
+				C242D3E0610CB1FE7B43B5FA45742BBF /* PlayerConfiguration.swift */,
+				06101A444F2D91194FA685C2FEF34578 /* PlayerContext.swift */,
+				0E420FFF57F9D83D38E87D7F0226B775 /* PlayerError.swift */,
+				20AE04D107CA4CA8B710CA99DF475509 /* PlayerMedia.swift */,
+				86ED9232DC1BB27525A02AF9F5C948B4 /* PlayerMediaItem.swift */,
+				6420C36B72415015D3F64900055F9FD2 /* PlayerMediaMetadata.swift */,
+				32DCE3534B18048FF82E1CB6FFE2AD68 /* PlayerPlugin.swift */,
+				6FF6E4D3B3FCA2089A2CD6E7E383FDB6 /* PlayerState.swift */,
+				256011B72C54F1DD0A6DBB4E269271D1 /* PlayerUnavailableActionReason.swift */,
+				FDB1094A00F5477A919CFFD2E380047E /* PlayingState.swift */,
+				63FBD10925412C060887D79694FB07BD /* RateObservingService.swift */,
+				7BEB85DD2AFB79C693392CFE5B7E56BB /* ReachabilityService.swift */,
+				CD183B5F2F06ABADC5E870CCE5BF76A5 /* RouteAudioService.swift */,
+				F299AA9498166EAAB5B62343BA608378 /* StoppedState.swift */,
+				309AA6A60EF0D8ACE22A442A788BFEAB /* TimerFactory.swift */,
+				F73D963F1B9C6578643AA3A3BA0CC6FA /* URLSessionDataTaskFactory.swift */,
+				D64FF811301B7D5D259E2577581AEA69 /* WaitingNetworkState.swift */,
+			);
+			name = Core;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -262,6 +459,14 @@
 			name = FeedParser;
 			sourceTree = "<group>";
 		};
+		AC1346B813A32B169CE3E9634E5D487F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE05D2B8BB435ED51BBD351323DBB5C8 /* ModernAVPlayer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B094F846135E4B40B6E1AA64EADFD12E /* NSString+HTML */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,7 +522,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				C5B6B19D35B728F123D6647C979408C1 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				3CA03FAD1DCBE3A63C34070F074ABE7B /* Products */,
+				AC1346B813A32B169CE3E9634E5D487F /* Pods */,
+				11407D8BB6E451FB92F00075FA1EFED3 /* Products */,
 				88B70BB46EF453E28E34F46F4020B720 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -330,9 +536,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE05D2B8BB435ED51BBD351323DBB5C8 /* ModernAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				53FF4B12295039F4A5471BB01B6B0409 /* Core */,
+				2CB9B075D8BC1DC8E027E57D63D3BB58 /* Support Files */,
+			);
+			name = ModernAVPlayer;
+			path = ModernAVPlayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		047CC85BDC81C7B93816F9284E2F67E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09C72DA6005339C1680A3D31ED971109 /* ModernAVPlayer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		06DC92609C254B36D374F7A42E0C6E19 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -348,11 +572,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		397AEEE1752D39A7CFB42C4E843DD5BB /* Headers */ = {
+		2C2F12AC89B5EDC6C923647B67A504CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC86EED875D1F192CAD156C9C35CCDBE /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h in Headers */,
+				E677F043639FFDF07CBDA37C2A0AECDC /* Pods-KKBoxPart2-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,11 +588,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C97B735D32038B25639D343077DF1510 /* Headers */ = {
+		D55B0044F5E505142A75A5914E9ECFB4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E23ABEB8A3049736580BE48C44B8354 /* Pods-KKBoxPart2-umbrella.h in Headers */,
+				A472A077359C9EE1015D43F966DBB159 /* Pods-KKBoxPart2-KKBoxPart2UITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,21 +601,40 @@
 /* Begin PBXNativeTarget section */
 		0079D3117173BBCABC8D0C4E76C6C2DF /* Pods-KKBoxPart2-KKBoxPart2UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FDBDE4E665FC57BA3375C6D66E950526 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2-KKBoxPart2UITests" */;
+			buildConfigurationList = 6FBDB38AB2D2E4E271DC78AAB67654F2 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2-KKBoxPart2UITests" */;
 			buildPhases = (
-				397AEEE1752D39A7CFB42C4E843DD5BB /* Headers */,
-				70EE7B67B8CE970CB6DBAF7FF6BB95CC /* Sources */,
-				5E237A98C26B9783E367B4EFAB7EBB2B /* Frameworks */,
-				4BADFC25557EEC28C4EE5E031AEAEC6B /* Resources */,
+				D55B0044F5E505142A75A5914E9ECFB4 /* Headers */,
+				29BCEAA2B3E32E13754FDFA39AE4F31D /* Sources */,
+				A15BDD4140ED5E4DB2C0541B55701BB3 /* Frameworks */,
+				43735FD07D84B85F01210C07C3022D52 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				43C13597B611F117FB3C775E312AFBC4 /* PBXTargetDependency */,
+				B485DB05BA4D6C62948EFDCD5472E4FB /* PBXTargetDependency */,
+				BEBD38703CB8F0F72D052AD7F1C12946 /* PBXTargetDependency */,
 			);
 			name = "Pods-KKBoxPart2-KKBoxPart2UITests";
 			productName = Pods_KKBoxPart2_KKBoxPart2UITests;
 			productReference = F458FBC70AC8ED534769A896ACFFFCBE /* Pods-KKBoxPart2-KKBoxPart2UITests */;
+			productType = "com.apple.product-type.framework";
+		};
+		15B077CFE362BA7DE3A1498A40F8076D /* ModernAVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631812FD73411580F07FE971981FC8D7 /* Build configuration list for PBXNativeTarget "ModernAVPlayer" */;
+			buildPhases = (
+				047CC85BDC81C7B93816F9284E2F67E3 /* Headers */,
+				A7D804BB1C133ECFED15C9E4734D9114 /* Sources */,
+				548088182363C66220B4C014DB9757AE /* Frameworks */,
+				2464133E4E95A52EACE923B3FA9ED7E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ModernAVPlayer;
+			productName = ModernAVPlayer;
+			productReference = B814601061A9C207CDD6FFD73E53880E /* ModernAVPlayer */;
 			productType = "com.apple.product-type.framework";
 		};
 		21F2865133E605B4032F35A018E217A9 /* MWFeedParser */ = {
@@ -414,17 +657,18 @@
 		};
 		7A8982354AF15E07B0C99834803BB309 /* Pods-KKBoxPart2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED71B6C5246B7C41F506390DAD2139CC /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2" */;
+			buildConfigurationList = EC8A2F1A4842756F0C7D8B6AAB0489C6 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2" */;
 			buildPhases = (
-				C97B735D32038B25639D343077DF1510 /* Headers */,
-				A5713BA101BB8ED419CE45F3FF28DAC7 /* Sources */,
-				9BA6295F0198ECCBD6DE678B7472C7DC /* Frameworks */,
-				66452E4A2F145A1D11A67FA09E7701E2 /* Resources */,
+				2C2F12AC89B5EDC6C923647B67A504CD /* Headers */,
+				74F8B1551A3C572845AFAB2C07D429DA /* Sources */,
+				DE6E7ED6875A8C63C0DB5A9B66C4066D /* Frameworks */,
+				349757FB5EC65EF1E25EC42E099E21A6 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3715DFFF4A95C1E64B254572F4955DAD /* PBXTargetDependency */,
+				76B036E96473CF2416E597E8205504DC /* PBXTargetDependency */,
+				4D4CC4D86BF0550F6B1CFCDF1C33C3F9 /* PBXTargetDependency */,
 			);
 			name = "Pods-KKBoxPart2";
 			productName = Pods_KKBoxPart2;
@@ -443,7 +687,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D238EF3E05ABDB332658DD00DAE00EFC /* PBXTargetDependency */,
+				7E6B0508BEA3CBAC6A6D4DCBB3EA25A7 /* PBXTargetDependency */,
 			);
 			name = "Pods-KKBoxPart2Tests";
 			productName = Pods_KKBoxPart2Tests;
@@ -468,10 +712,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3CA03FAD1DCBE3A63C34070F074ABE7B /* Products */;
+			productRefGroup = 11407D8BB6E451FB92F00075FA1EFED3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				15B077CFE362BA7DE3A1498A40F8076D /* ModernAVPlayer */,
 				21F2865133E605B4032F35A018E217A9 /* MWFeedParser */,
 				7A8982354AF15E07B0C99834803BB309 /* Pods-KKBoxPart2 */,
 				0079D3117173BBCABC8D0C4E76C6C2DF /* Pods-KKBoxPart2-KKBoxPart2UITests */,
@@ -481,14 +726,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4BADFC25557EEC28C4EE5E031AEAEC6B /* Resources */ = {
+		2464133E4E95A52EACE923B3FA9ED7E6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66452E4A2F145A1D11A67FA09E7701E2 /* Resources */ = {
+		349757FB5EC65EF1E25EC42E099E21A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43735FD07D84B85F01210C07C3022D52 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,42 +786,109 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70EE7B67B8CE970CB6DBAF7FF6BB95CC /* Sources */ = {
+		29BCEAA2B3E32E13754FDFA39AE4F31D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC2B10393BD6F96BE2E1B6BB524A4A84 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m in Sources */,
+				E191D2CCC88E7BAE7689EB1F0AA08353 /* Pods-KKBoxPart2-KKBoxPart2UITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5713BA101BB8ED419CE45F3FF28DAC7 /* Sources */ = {
+		74F8B1551A3C572845AFAB2C07D429DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04378E04D4E896F2E5EFED035E513D4 /* Pods-KKBoxPart2-dummy.m in Sources */,
+				C895302F992F360B3309056C6A61AE78 /* Pods-KKBoxPart2-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7D804BB1C133ECFED15C9E4734D9114 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63ADBA9C78981A6722F1A931DE149FD1 /* AudioSessionService.swift in Sources */,
+				634BA74CEECB8E0EA2EF61F43552A5C1 /* AVPlayerItemInitService.swift in Sources */,
+				FF9CA47D89C081DE307CA3793E1E8A13 /* AVPlayerRemoteCommand.swift in Sources */,
+				A9654EBC67EA97830142F0C259FC38BC /* BufferingState.swift in Sources */,
+				FC6C35B4A4E2C8EFB25F721AE3E2ECCE /* CustomAudioSession.swift in Sources */,
+				3EC5EF1D8A7778A52D80E3F39C288B7E /* FailedState.swift in Sources */,
+				3A1895287AAC7C5A68D1E21596F1A08C /* InitState.swift in Sources */,
+				9AE522293AAD5CE968E2A16F441D6E14 /* InterruptionAudioService.swift in Sources */,
+				88A63F843ADCF76D322FE3C599418E95 /* ItemStatusObservingService.swift in Sources */,
+				CE7E65607396253F4608E7EC9CFF9A63 /* LoadedState.swift in Sources */,
+				AA3D3A39247DB9ADA51943D81362DD7F /* LoadingMediaState.swift in Sources */,
+				E139E5E513EF3D4BAFC1B69F6E081DFC /* MediaPlayer.swift in Sources */,
+				EEFE1B5B0C344AB0EE8762EA20D594D2 /* MediaType.swift in Sources */,
+				E3E5CDBB52C33ABED333741295D24FD0 /* ModernAVPlayer.swift in Sources */,
+				2B1AD01D3EBCD75C5D797479E23F6BF0 /* ModernAVPlayer-dummy.m in Sources */,
+				A796068593CBD6C8448F02AE067E7A40 /* ModernAVPlayerConfiguration.swift in Sources */,
+				BE70CBE11C1BFEB9CD1FCBA7B8A9D93A /* ModernAVPlayerCurrentState.swift in Sources */,
+				BB3731B7BC8C2A9670550A6A5B423C5F /* ModernAVPlayerDelegate.swift in Sources */,
+				EF91E74E49F86C770329321079889331 /* ModernAVPlayerExposable.swift in Sources */,
+				282B4760D7301536FB254867E061B2C9 /* ModernAVPlayerLogger.swift in Sources */,
+				B1D0939B44EBD87ED6C3644D74FF71A2 /* ModernAVPlayerLoggerDomain.swift in Sources */,
+				737B7B9F425C8081657520BF2BAB1C2F /* ModernAVPlayerMedia.swift in Sources */,
+				95D8E8E807ED75B98C74236C6F7ECEAA /* ModernAVPlayerMediaItem.swift in Sources */,
+				FF54E7463070EBB86F108D74D9472B3C /* ModernAVPlayerMediaMetadata.swift in Sources */,
+				6C1EC74C02AAFE8156DC458CF309F513 /* ModernAVPlayerRemoteCommand.swift in Sources */,
+				155DBD6C534148FF635F8D73EF8E8DC4 /* ModernAVPlayerRemoteCommandFactory.swift in Sources */,
+				5C157D0B808A62A7A48C79C81E1681D2 /* ModernAVPlayerSeekService.swift in Sources */,
+				CE39F7E8CCC34C0D2B19C56CFFD0FE69 /* NowPlayingService.swift in Sources */,
+				4D3E505C90AF31A0CD3E584839C00BA1 /* PausedState.swift in Sources */,
+				732674AEF87538E78CFA9526631A2328 /* PlaybackObservingService.swift in Sources */,
+				24910549C81EE895089D8CA4C6C1EA20 /* PlayerCommand.swift in Sources */,
+				4458BD0707AB0AA06B67F6A8C7495C81 /* PlayerConfiguration.swift in Sources */,
+				D099C2A2C0E98B94D8C542BACD2E5AB4 /* PlayerContext.swift in Sources */,
+				4905E88AB241392917888398BFC6296E /* PlayerError.swift in Sources */,
+				B2B76443FB1A4D73981AC0F74551227B /* PlayerMedia.swift in Sources */,
+				A42D9CB06D6EAFE96316025880BE80C0 /* PlayerMediaItem.swift in Sources */,
+				19EC8A2A0AE6781EE14EEB62ACD17CED /* PlayerMediaMetadata.swift in Sources */,
+				9E058B41BDAE542620AC119FACE5DBCC /* PlayerPlugin.swift in Sources */,
+				FE2510CADEA9511F7F8FD1765CE3DEE7 /* PlayerState.swift in Sources */,
+				EF09044FEFB85A560E4BC896DE7DBCCE /* PlayerUnavailableActionReason.swift in Sources */,
+				A455E2E75DB694643A186EC1B6148E6C /* PlayingState.swift in Sources */,
+				E035BD516D16463E6AD134F2259CDD25 /* RateObservingService.swift in Sources */,
+				7E15C84DDAC7D5884FDD1AE4ECB40322 /* ReachabilityService.swift in Sources */,
+				B76F78A575F7780032616910EF90D2DA /* RouteAudioService.swift in Sources */,
+				EA7189A1D9FE691D0DE70020A6070B61 /* StoppedState.swift in Sources */,
+				288E05CABB501E73C4C468976DDC91EF /* TimerFactory.swift in Sources */,
+				0EFD800AC946DC98DAF2DC1E9B26C025 /* URLSessionDataTaskFactory.swift in Sources */,
+				5FF280A16EF26703AFC262C2BFD8449A /* WaitingNetworkState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3715DFFF4A95C1E64B254572F4955DAD /* PBXTargetDependency */ = {
+		4D4CC4D86BF0550F6B1CFCDF1C33C3F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ModernAVPlayer;
+			target = 15B077CFE362BA7DE3A1498A40F8076D /* ModernAVPlayer */;
+			targetProxy = 30D8936F8E9B4F5149AB0259CCA81BBE /* PBXContainerItemProxy */;
+		};
+		76B036E96473CF2416E597E8205504DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MWFeedParser;
 			target = 21F2865133E605B4032F35A018E217A9 /* MWFeedParser */;
-			targetProxy = E9F108E09E5B77C104210594CBB6A050 /* PBXContainerItemProxy */;
+			targetProxy = 0F08F107A1035BA2E5AFA50F7098ED07 /* PBXContainerItemProxy */;
 		};
-		43C13597B611F117FB3C775E312AFBC4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MWFeedParser;
-			target = 21F2865133E605B4032F35A018E217A9 /* MWFeedParser */;
-			targetProxy = 9AA8C9A0CB6A39001383DB55101EC274 /* PBXContainerItemProxy */;
-		};
-		D238EF3E05ABDB332658DD00DAE00EFC /* PBXTargetDependency */ = {
+		7E6B0508BEA3CBAC6A6D4DCBB3EA25A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-KKBoxPart2";
 			target = 7A8982354AF15E07B0C99834803BB309 /* Pods-KKBoxPart2 */;
-			targetProxy = B832D73EA5DB871D54EC3F9E803D06E2 /* PBXContainerItemProxy */;
+			targetProxy = DD3D20293095181C870C2BAF38AAE90B /* PBXContainerItemProxy */;
+		};
+		B485DB05BA4D6C62948EFDCD5472E4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MWFeedParser;
+			target = 21F2865133E605B4032F35A018E217A9 /* MWFeedParser */;
+			targetProxy = 4065A03274448332969CF9A1909D2EFE /* PBXContainerItemProxy */;
+		};
+		BEBD38703CB8F0F72D052AD7F1C12946 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ModernAVPlayer;
+			target = 15B077CFE362BA7DE3A1498A40F8076D /* ModernAVPlayer */;
+			targetProxy = E791A9F8369333B64502058E654F2A16 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -607,6 +926,81 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		2BEDEAA374B9ABA25B5FC252E688BDF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 505F3A176B7009F4CC3FFE5FF0B5BF3D /* Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A21A7DA93AEE6B2B36D1B8241F4A695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AB433693F9650925C6BCC451BEF7AD2 /* Pods-KKBoxPart2-KKBoxPart2UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -709,43 +1103,6 @@
 			};
 			name = Release;
 		};
-		6EAD678E946109B2F172A7F4EE8B375B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EDD542D7D104E7BB99D858A35C2229F /* Pods-KKBoxPart2.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		7740877F15688B034EDCC14CB071CC29 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67100B2726CFE375C782CB2876CE7D45 /* Pods-KKBoxPart2Tests.release.xcconfig */;
@@ -777,6 +1134,42 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		788913E70ECA596A2F2E36B5614AA207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C51898CFE9540F287AC8036D99A68E7 /* ModernAVPlayer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ModernAVPlayer/ModernAVPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ModernAVPlayer/ModernAVPlayer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ModernAVPlayer/ModernAVPlayer.modulemap";
+				PRODUCT_MODULE_NAME = ModernAVPlayer;
+				PRODUCT_NAME = ModernAVPlayer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -821,7 +1214,44 @@
 			};
 			name = Debug;
 		};
-		9772EF9D9DB531A5B8EA95175CFE07A7 /* Release */ = {
+		84BF7B4AF38872EF65D90356EEF0B3AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EDD542D7D104E7BB99D858A35C2229F /* Pods-KKBoxPart2.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2/Pods-KKBoxPart2.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9ECCFE8BAFA5018E902659602137DD46 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 23235DC8A874DA5BE3E7120971D65F62 /* Pods-KKBoxPart2.release.xcconfig */;
 			buildSettings = {
@@ -858,43 +1288,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		A23689075784DAB881D716BD44CF915B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 505F3A176B7009F4CC3FFE5FF0B5BF3D /* Pods-KKBoxPart2-KKBoxPart2UITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		CD85FD90473CFBE797E4264E7BBC70AF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -958,11 +1351,10 @@
 			};
 			name = Release;
 		};
-		F3F28F717CDB9E0E580F6A22678AD6CB /* Release */ = {
+		CF8AF4A1A957790AC0885AC1BD12B15D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0AB433693F9650925C6BCC451BEF7AD2 /* Pods-KKBoxPart2-KKBoxPart2UITests.release.xcconfig */;
+			baseConfigurationReference = 3B603AB2BC061FFE0F0633B46119856A /* ModernAVPlayer.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -972,29 +1364,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ModernAVPlayer/ModernAVPlayer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ModernAVPlayer/ModernAVPlayer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/ModernAVPlayer/ModernAVPlayer.modulemap";
+				PRODUCT_MODULE_NAME = ModernAVPlayer;
+				PRODUCT_NAME = ModernAVPlayer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1004,6 +1394,24 @@
 			buildConfigurations = (
 				4214E6946993DF02ED98D89047C64016 /* Debug */,
 				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631812FD73411580F07FE971981FC8D7 /* Build configuration list for PBXNativeTarget "ModernAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF8AF4A1A957790AC0885AC1BD12B15D /* Debug */,
+				788913E70ECA596A2F2E36B5614AA207 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FBDB38AB2D2E4E271DC78AAB67654F2 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2-KKBoxPart2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BEDEAA374B9ABA25B5FC252E688BDF2 /* Debug */,
+				3A21A7DA93AEE6B2B36D1B8241F4A695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1026,20 +1434,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED71B6C5246B7C41F506390DAD2139CC /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2" */ = {
+		EC8A2F1A4842756F0C7D8B6AAB0489C6 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6EAD678E946109B2F172A7F4EE8B375B /* Debug */,
-				9772EF9D9DB531A5B8EA95175CFE07A7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FDBDE4E665FC57BA3375C6D66E950526 /* Build configuration list for PBXNativeTarget "Pods-KKBoxPart2-KKBoxPart2UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A23689075784DAB881D716BD44CF915B /* Debug */,
-				F3F28F717CDB9E0E580F6A22678AD6CB /* Release */,
+				84BF7B4AF38872EF65D90356EEF0B3AF /* Debug */,
+				9ECCFE8BAFA5018E902659602137DD46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

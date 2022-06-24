@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-KKBoxPart2-KKBoxPart2UITests/Pods-KKBoxPart2-KKBoxPart2UITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/MWFeedParser/MWFeedParser.framework
+${BUILT_PRODUCTS_DIR}/ModernAVPlayer/ModernAVPlayer.framework
