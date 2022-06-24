@@ -16,8 +16,10 @@ enum PlayerState {
     case canPause
     
     case canPlay
-    
+        
     case stopped
+    
+    case end
     
     case failed
     

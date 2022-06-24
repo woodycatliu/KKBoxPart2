@@ -198,3 +198,4 @@ extension ModernAVPlayer: PlayerContextDelegate {
         delegate?.modernAVPlayer(self, didItemPlayToEndTime: endTime)
     }
 }
+

@@ -10,7 +10,7 @@ import Combine
 protocol PlayerController {
     var playerState: CurrentValueSubject<PlayerState, Never> { get }
     
-    var pocastState: CurrentValueSubject<PlayerState, Never> { get }
+    var pocastState: CurrentValueSubject<PocastPlayState?, Never> { get }
     
     func load(mediaInfo info: PlayerMediaInfo, isAutoStart: Bool)
     // 播放偏移秒數

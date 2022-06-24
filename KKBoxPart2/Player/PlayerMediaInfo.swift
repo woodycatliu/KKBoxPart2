@@ -9,9 +9,10 @@ import Foundation
 
 protocol PlayerMediaInfo {
     var id: String { get }
+    var link: String { get }
     var title: String? { get }
     var albumTitle: String? { get }
     var imageData: Data? { get }
-    var remoteImga: URL? { get }
+    var remoteImage: URL? { get }
     var artist: String? { get }
 }
