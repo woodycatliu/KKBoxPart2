@@ -17,8 +17,6 @@
 - (NSString *)description {
     NSMutableString *string = [[NSMutableString alloc] initWithString:@"EpisodeItem: "];
     if (title)   [string appendFormat:@"“%@”", EXCERPT(title, 50)];
-    //if (link)    [string appendFormat:@" (%@)", link];
-    //if (summary) [string appendFormat:@", %@", MWExcerpt(summary, 50)];
     return string;
 }
 
