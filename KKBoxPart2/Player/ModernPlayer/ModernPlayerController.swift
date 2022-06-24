@@ -22,7 +22,6 @@ class ModernPlayerController: PlayerController {
         player.remoteCommands = nil
     }
     
-    
     func load(mediaInfo info: PlayerMediaInfo, isAutoStart: Bool) {
         guard let url = URL(string: info.link) else {
             playerState.send(.failed)
@@ -57,6 +56,7 @@ class ModernPlayerController: PlayerController {
     
 }
 
+// MARK: ModernAVPlayerDelegate
 extension ModernPlayerController: ModernAVPlayerDelegate {
     
     func modernAVPlayer(_ player: ModernAVPlayer, didStateChange state: ModernAVPlayer.State) {
@@ -84,7 +84,7 @@ extension ModernPlayerController: ModernAVPlayerDelegate {
     
 }
 
-
+// MARK: extension PlayerState
 extension PlayerState {
     
     static func getState(from: ModernAVPlayer.State) -> PlayerState {

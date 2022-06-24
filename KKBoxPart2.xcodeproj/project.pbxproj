@@ -31,6 +31,8 @@
 		EFFB19F3286551A1008FBC44 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19F2286551A1008FBC44 /* State.swift */; };
 		EFFB19F7286571BF008FBC44 /* ModernPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19F6286571BF008FBC44 /* ModernPlayerController.swift */; };
 		EFFB19F9286572DB008FBC44 /* ModernConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19F8286572DB008FBC44 /* ModernConfig.swift */; };
+		EFFB19FC286594EB008FBC44 /* GobalPlayerContrller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19FB286594EB008FBC44 /* GobalPlayerContrller.swift */; };
+		EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB19FD2865958A008FBC44 /* PodcastsPlayController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		EFFB19F2286551A1008FBC44 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		EFFB19F6286571BF008FBC44 /* ModernPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernPlayerController.swift; sourceTree = "<group>"; };
 		EFFB19F8286572DB008FBC44 /* ModernConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModernConfig.swift; sourceTree = "<group>"; };
+		EFFB19FB286594EB008FBC44 /* GobalPlayerContrller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GobalPlayerContrller.swift; sourceTree = "<group>"; };
+		EFFB19FD2865958A008FBC44 /* PodcastsPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsPlayController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +230,9 @@
 		EFFB19ED2865498C008FBC44 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				EFFB19FA28659484008FBC44 /* GobalPlayer */,
 				EFFB19F528657191008FBC44 /* ModernPlayer */,
+				EFFB19FD2865958A008FBC44 /* PodcastsPlayController.swift */,
 				EFFB19EE28654997008FBC44 /* PlayerController.swift */,
 				EFFB19F028654EBD008FBC44 /* PlayerMediaInfo.swift */,
 				EFFB19F2286551A1008FBC44 /* State.swift */,
@@ -241,6 +247,14 @@
 				EFFB19F8286572DB008FBC44 /* ModernConfig.swift */,
 			);
 			path = ModernPlayer;
+			sourceTree = "<group>";
+		};
+		EFFB19FA28659484008FBC44 /* GobalPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				EFFB19FB286594EB008FBC44 /* GobalPlayerContrller.swift */,
+			);
+			path = GobalPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,11 +503,13 @@
 				EFFB19F128654EBD008FBC44 /* PlayerMediaInfo.swift in Sources */,
 				EFFB19F9286572DB008FBC44 /* ModernConfig.swift in Sources */,
 				EFFB19F7286571BF008FBC44 /* ModernPlayerController.swift in Sources */,
+				EFFB19FC286594EB008FBC44 /* GobalPlayerContrller.swift in Sources */,
 				EFAD50F32864848600553B76 /* Gobal.swift in Sources */,
 				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
 				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
 				EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */,
 				EFFB19EF28654997008FBC44 /* PlayerController.swift in Sources */,
+				EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
