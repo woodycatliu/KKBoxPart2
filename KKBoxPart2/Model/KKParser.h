@@ -42,7 +42,7 @@
 
 @property (nonatomic, unsafe_unretained) id <KKParserDelegate> delegate;
 @property (nonatomic, copy) NSArray<EpisodeItem *> *items;
-@property (nonatomic, strong) EpisodeInfo *info;
+@property (nonatomic, copy) EpisodeInfo *info;
 
 #pragma mark private
 @property (nonatomic, strong) MWFeedParser *parser;

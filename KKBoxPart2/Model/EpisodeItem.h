@@ -8,10 +8,9 @@
 #import <Foundation/Foundation.h>
 
 
-@interface EpisodeItem : NSObject <NSCoding> {
+@interface EpisodeItem : NSObject <NSCoding, NSCopying> {
     NSString *title;
     NSDate *date;
-    NSString *guid;
     NSString *author;
     NSString *image;
     NSString *summary;
@@ -20,7 +19,6 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSDate *date;
-@property (nonatomic, copy) NSString *guid;
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSString *image;
 @property (nonatomic, copy) NSString *summary;

@@ -13,7 +13,7 @@
 
 @implementation EpisodeItem
 
-@synthesize title, date, summary, author, guid, image, link;
+@synthesize title, date, summary, author, image, link;
 
 
 - (NSString *)description {
@@ -32,7 +32,6 @@
     if (image) [encoder encodeObject:title forKey:@"image"];
     if (date) [encoder encodeObject:link forKey:@"date"];
     if (author) [encoder encodeObject:title forKey:@"author"];
-    if (guid) [encoder encodeObject:title forKey:@"guid"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
@@ -43,9 +42,22 @@
         image = [decoder decodeObjectForKey:@"image"];
         date = [decoder decodeObjectForKey:@"date"];
         author = [decoder decodeObjectForKey:@"author"];
-        guid = [decoder decodeObjectForKey:@"guid"];
     }
     return self;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    EpisodeItem *copy = [[[self class] alloc] init];
+    
+    if (copy) {
+        copy.title = title.copy;
+        copy.date = date.copy;
+        copy.author = author.copy;
+        copy.image = image.copy;
+        copy.summary = summary.copy;
+        copy.link = link.copy;
+    }
+    return  copy;
 }
 
 @end

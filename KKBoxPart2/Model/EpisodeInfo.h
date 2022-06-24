@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface EpisodeInfo : NSObject <NSCoding> {
+@interface EpisodeInfo : NSObject <NSCoding, NSCopying> {
     
     NSString *title; // Feed title
     NSString *link; // Feed link

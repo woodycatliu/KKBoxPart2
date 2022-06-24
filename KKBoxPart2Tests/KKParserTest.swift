@@ -9,22 +9,20 @@ import XCTest
 @testable import KKBoxPart2
 
 class KKParserTest: XCTestCase {
-    var parser: KKParser!
     
     override func setUp() {
         super.setUp()
-        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
-        parser = KKParser(feedURL: url)!
-        parser.delegate = self
-        parser.parse()
     }
     
     override func tearDown() {
-        parser = nil
         super.tearDown()
     }
     
     func test_Begin() {
+        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
+        let parser = KKParser(feedURL: url)!
+        parser.delegate = self
+        parser.parse()
     }
     
     func test_EpisodeInfo(_ info: EpisodeInfo) {

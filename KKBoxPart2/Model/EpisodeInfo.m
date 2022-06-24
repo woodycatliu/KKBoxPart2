@@ -41,4 +41,17 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    EpisodeInfo *copy = [[[self class] alloc] init];
+    
+    if (copy) {
+        copy.title = title.copy;
+        copy.url = url.copy;
+        copy.image = image.copy;
+        copy.link = link.copy;
+        copy.summary = summary.copy;
+    }
+    return  copy;
+}
+
 @end

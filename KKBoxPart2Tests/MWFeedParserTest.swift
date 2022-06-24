@@ -17,20 +17,21 @@ class MWFeedParserTest: XCTestCase {
        
     override func setUp() {
         super.setUp()
-        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
-        let parser = MWFeedParser(feedURL: url)!
-        parser.delegate = self
-        parser.parse()
-        items.removeAll()
-        info = nil
+       
     }
     
     override func tearDown() {
+        items.removeAll()
+        info = nil
         super.tearDown()
     }
     
     
     func testWhat() {
+        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
+        let parser = MWFeedParser(feedURL: url)!
+        parser.delegate = self
+        parser.parse()
     }
     
     func test_MWFeedInfo(_ info: MWFeedInfo) {
