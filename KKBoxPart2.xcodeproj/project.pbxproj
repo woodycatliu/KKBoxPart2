@@ -20,6 +20,8 @@
 		EFC1D9AF2866A723002D1012 /* NavigateActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1D9AE2866A723002D1012 /* NavigateActionReducer.swift */; };
 		EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */; };
 		EFC1D9B42866B895002D1012 /* MediaPageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1D9B32866B895002D1012 /* MediaPageTest.swift */; };
+		EFCAE0DF2866E9570074F26E /* ViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0DE2866E9570074F26E /* ViewModelInterface.swift */; };
+		EFCAE0E12866E9D90074F26E /* FrontPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0E02866E9D90074F26E /* FrontPageViewModel.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -81,6 +83,8 @@
 		EFC1D9AE2866A723002D1012 /* NavigateActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateActionReducer.swift; sourceTree = "<group>"; };
 		EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageUseCase.swift; sourceTree = "<group>"; };
 		EFC1D9B32866B895002D1012 /* MediaPageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageTest.swift; sourceTree = "<group>"; };
+		EFCAE0DE2866E9570074F26E /* ViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelInterface.swift; sourceTree = "<group>"; };
+		EFCAE0E02866E9D90074F26E /* FrontPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewModel.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 			children = (
 				EFFB1A042865B130008FBC44 /* FrontPageUseCase.swift */,
 				EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */,
+				EFCAE0E02866E9D90074F26E /* FrontPageViewModel.swift */,
 			);
 			path = FrontPage;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 				EFFB1A0A2865BB85008FBC44 /* Album.swift */,
 				EFFB1A0C2865BBD9008FBC44 /* Media.swift */,
 				EFC1D9AE2866A723002D1012 /* NavigateActionReducer.swift */,
+				EFCAE0DE2866E9570074F26E /* ViewModelInterface.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -551,8 +557,10 @@
 				EFFB19EF28654997008FBC44 /* PlayerController.swift in Sources */,
 				EFFB1A0D2865BBD9008FBC44 /* Media.swift in Sources */,
 				EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */,
+				EFCAE0E12866E9D90074F26E /* FrontPageViewModel.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
 				EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */,
+				EFCAE0DF2866E9570074F26E /* ViewModelInterface.swift in Sources */,
 				EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

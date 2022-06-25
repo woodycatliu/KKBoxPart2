@@ -11,24 +11,24 @@ import Combine
 typealias FrontPageEnvionment = Any?
 
 enum FrontPageNavigatedAction {
-    case mediaInfoPage(_ media: PlayerMediaInfo, _ cache: [PlayerMediaInfo])
+    case mediaInfoPage(_ media: Media, _ cache: [Media])
 }
 
 protocol FrontPageUseCase {
     var navigateReducer: NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> { get }
-    func convertRssInfo(_ info: EpisodeInfo, items: [EpisodeItem])-> (album: AlbumMediaInfo, mediaList: [PlayerMediaInfo])
-    func updateAlbumInfo(newAlbumInfo new: AlbumMediaInfo, oldAlbumInfo old: inout AlbumMediaInfo?)
-    func updateMediaList(newMediaList new: [PlayerMediaInfo], oldMediaList old: inout [PlayerMediaInfo]?)
-    func cellDidSelected(_ indexPath: IndexPath, _ mediaList: [PlayerMediaInfo])
+    func convertRssInfo(_ info: EpisodeInfo, items: [EpisodeItem])-> (album: Album, mediaList: [Media])
+    func updateAlbumInfo(newAlbumInfo new: Album, oldAlbumInfo old: inout Album?)
+    func updateMediaList(newMediaList new: [Media], oldMediaList old: inout [Media]?)
+    func cellDidSelected(_ indexPath: IndexPath, _ mediaList: [Media])
+    func fetchRss(_ url: URL)-> KKParser.ParsePublisher
 }
 
 extension FrontPageUseCase {
-    
-    func updateAlbumInfo(newAlbumInfo new: AlbumMediaInfo, oldAlbumInfo old: inout AlbumMediaInfo?) {
+    func updateAlbumInfo(newAlbumInfo new: Album, oldAlbumInfo old: inout Album?) {
         updateState(new, &old)
     }
 
-    func updateMediaList(newMediaList new: [PlayerMediaInfo], oldMediaList old: inout [PlayerMediaInfo]?) {
+    func updateMediaList(newMediaList new: [Media], oldMediaList old: inout [Media]?) {
         updateState(new, &old)
     }
 
@@ -40,9 +40,14 @@ extension FrontPageUseCase {
 
 struct DefaultFrontPageCase: FrontPageUseCase {
     
+    /// output: (EpisodeInfo, [EpisodeItem])
+    func fetchRss(_ url: URL) -> KKParser.ParsePublisher {
+        return KKParser.publish(url)
+    }
+    
     var navigateReducer: NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment>
 
-    func convertRssInfo(_ info: EpisodeInfo, items: [EpisodeItem]) -> (album: AlbumMediaInfo, mediaList: [PlayerMediaInfo]) {
+    func convertRssInfo(_ info: EpisodeInfo, items: [EpisodeItem]) -> (album: Album, mediaList: [Media]) {
         let album = Album(title: info.title, image: info.image)
         let mediaList = items.map {
             Media(link: $0.link, title: $0.title, albumTitle: info.title, imageData: nil, remoteImage: URL(string: $0.image), artist: $0.summary, date: $0.date)
@@ -50,7 +55,7 @@ struct DefaultFrontPageCase: FrontPageUseCase {
         return (album, mediaList)
     }
     
-    func cellDidSelected(_ indexPath: IndexPath, _ mediaList: [PlayerMediaInfo]) {
+    func cellDidSelected(_ indexPath: IndexPath, _ mediaList: [Media]) {
         guard mediaList.indices.contains(indexPath.row) else { return }
         let media = mediaList[indexPath.row]
         navigateReducer(.mediaInfoPage(media, mediaList), GobalPlayerContrller.shared)
@@ -58,7 +63,7 @@ struct DefaultFrontPageCase: FrontPageUseCase {
 }
 
 
-let FrontPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo, [PlayerMediaInfo])->())-> NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> = { completion in
+let FrontPageNavigatedReducer: (_ completion: @escaping (Media, [Media])->())-> NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> = { completion in
     return { action, _ in
         switch action {
         case .mediaInfoPage(let media, let list):
@@ -66,3 +71,5 @@ let FrontPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo, [Playe
         }
     }
 }
+
+

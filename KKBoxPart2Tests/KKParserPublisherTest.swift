@@ -12,35 +12,34 @@ import XCTest
 import Combine
 
 class KKParserPublisherTest: XCTestCase {
-    var parser: AnyCancellable?
+    private var bag = Set<AnyCancellable>()
     
     var info: EpisodeInfo!
     var items: [EpisodeItem] = []
     
-    @Published
-    var album: AlbumMediaInfo!
-    @Published
-    var mediaList: [PlayerMediaInfo]? = []
+    var album: CurrentValueSubject<Album?, Never> = .init(nil)
+
+    var mediaList: CurrentValueSubject<[Media]?, Never> = .init(nil)
     
     override func setUp() {
         super.setUp()
         let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
         let ext = expectation(description: "Test KKParserPublisherTest")
-        parser = KKParser.publish(url)
+        KKParser.publish(url)
             .sink(receiveCompletion: { _ in },
                   receiveValue: { [weak self] in
                 self?.info = $0
                 self?.items = $1
                 ext.fulfill()
-            })
+            }).store(in: &bag)
         waitForExpectations(timeout: 0.5, handler: nil)
     }
     
     override func tearDown() {
-        parser = nil
+        bag.removeAll()
         info = nil
-        album = nil
-        mediaList?.removeAll()
+        album.value = nil
+        mediaList.value?.removeAll()
         items.removeAll()
         super.tearDown()
     }
@@ -100,8 +99,8 @@ class KKParserPublisherTest: XCTestCase {
     }
     func test_FrontUseCase() {
         
-        var detectorAlbum: AlbumMediaInfo
-        var detectorMedias: [PlayerMediaInfo]
+        var detectorAlbum: Album
+        var detectorMedias: [Media]
         
         // MARK: Build Nativagate Case and UseCase
         let detector = Detector()
@@ -125,20 +124,20 @@ class KKParserPublisherTest: XCTestCase {
         testMediaList(detectorMedias)
         
         // MARK: test update
-        useCase.updateAlbumInfo(newAlbumInfo: detectorAlbum, oldAlbumInfo: &album)
+        useCase.updateAlbumInfo(newAlbumInfo: detectorAlbum, oldAlbumInfo: &album.value)
         
-        useCase.updateMediaList(newMediaList: detectorMedias, oldMediaList: &mediaList)
+        useCase.updateMediaList(newMediaList: detectorMedias, oldMediaList: &mediaList.value)
         
-        testAlbum(album)
+        testAlbum(album.value!)
         
         XCTAssertNotNil(mediaList, "mediaList is nil")
         
-        testMediaList(mediaList!)
+        testMediaList(mediaList.value!)
         
         // MARK: test navigateReducer
-        let media1 = mediaList!.first!
+        let media1 = mediaList.value!.first!
         
-        useCase.navigateReducer(.mediaInfoPage(media1, mediaList!), nil)
+        useCase.navigateReducer(.mediaInfoPage(media1, mediaList.value!), nil)
         
         XCTAssertTrue(detector.isGoToMediaPage)
         
@@ -146,13 +145,85 @@ class KKParserPublisherTest: XCTestCase {
         
         // MARK: test cell did selected
         detector.isGoToMediaPage = false
-        let lastIndexPath = IndexPath(row: mediaList!.indices.max()!, section: 0)
+        let lastIndexPath = IndexPath(row: mediaList.value!.indices.max()!, section: 0)
         
-        useCase.cellDidSelected(lastIndexPath, mediaList!)
+        useCase.cellDidSelected(lastIndexPath, mediaList.value!)
         
-        let lastMedia = mediaList!.last!
+        let lastMedia = detector.mediaInfo
+        
+        XCTAssertNotNil(lastMedia, "lastMedia is nil")
         testLastMedia(lastMedia)
         
+        // MARK: test fetch rss
+        album.value = nil
+        mediaList.value?.removeAll()
+        
+        album
+            .dropFirst()
+            .sink(receiveValue: { [weak self] album in
+            XCTAssertNotNil(album, "Observed album is nil")
+            self?.testAlbum(album!)
+        }).store(in: &bag)
+        
+        mediaList
+            .dropFirst()
+            .sink(receiveValue: { [weak self] list in
+            XCTAssertNotNil(list, "Observed list is nil")
+            XCTAssertNotNil(list!.first, "Observed list first is nil")
+            self?.testFirstMedia(list?.first!)
+        }).store(in: &bag)
+        
+        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
+        let ext = expectation(description: "Test KKParserPublisherTest")
+        useCase.fetchRss(url)
+            .map { return useCase.convertRssInfo($0, items: $1) }
+            .sink(receiveCompletion: { _ in }, receiveValue: { [weak self] in
+                self?.album.value = $0.album
+                self?.mediaList.value = $0.mediaList
+                ext.fulfill()
+            }).store(in: &bag)
+                    
+        waitForExpectations(timeout: 0.5, handler: nil)
+        
+        // MARK: test viewModel
+        let viewModel = FrontPageViewModel(useCase)
+        let vmex = expectation(description: "Test ViewModel")
+        vmex.expectedFulfillmentCount = 2
+
+        viewModel.album
+            .dropFirst()
+            .sink(receiveValue: { [weak self] album in
+                XCTAssertNotNil(album, "Observed album is nil")
+                self?.testAlbum(album!)
+                vmex.fulfill()
+            }).store(in: &bag)
+        
+        viewModel.mediaList
+            .dropFirst()
+            .sink(receiveValue: { [weak self] list in
+                XCTAssertNotNil(list, "Observed list is nil")
+                XCTAssertNotNil(list!.first, "Observed list first is nil")
+                self?.testFirstMedia(list?.first!)
+                vmex.fulfill()
+            }).store(in: &bag)
+        
+        viewModel.fetch()
+        waitForExpectations(timeout: 0.5, handler: nil)
+        let count = viewModel.numberOfRowsInSection(0)
+        XCTAssertEqual(count, 148)
+        
+        detector.isGoToMediaPage = false
+        detector.mediaInfo = nil
+        
+        let firstIndex = IndexPath(row: 0, section: 0)
+        
+        viewModel.didSelectedCell(firstIndex)
+        
+        XCTAssertTrue(detector.isGoToMediaPage)
+        
+        XCTAssertNotNil(detector.mediaInfo)
+
+        testFirstMedia(detector.mediaInfo!)
     }
     
     
@@ -172,6 +243,7 @@ class KKParserPublisherTest: XCTestCase {
         testLastMedia(media148)
         
     }
+    
     
     func testFirstMedia(_ media: PlayerMediaInfo!) {
         XCTAssertNotNil(media.title, "item title is nil")
