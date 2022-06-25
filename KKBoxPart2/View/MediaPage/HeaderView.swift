@@ -12,6 +12,7 @@ class HeaderView: UIView {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.backgroundColor = .systemGray5
+        iv.layer.masksToBounds = true
         return iv
     }()
     override init(frame: CGRect) {

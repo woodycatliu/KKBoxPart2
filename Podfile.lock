@@ -11,14 +11,19 @@ PODS:
     - "MWFeedParser/NSString+HTML"
   - "MWFeedParser/NSDate+InternetDateTime (1.0.1)"
   - "MWFeedParser/NSString+HTML (1.0.1)"
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
 
 DEPENDENCIES:
   - ModernAVPlayer
   - MWFeedParser (from `/Users/woody/Desktop/personal/KK/MWFeedParser`)
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - ModernAVPlayer
+    - SDWebImage
 
 EXTERNAL SOURCES:
   MWFeedParser:
@@ -27,7 +32,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   ModernAVPlayer: d04d53be7b620990250d0e13bee3be7217dc6214
   MWFeedParser: 3b7def9d9970c7340f450c5743a8c1cb27c00227
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
 
-PODFILE CHECKSUM: bcf2490bcacc9f1ab125e97eb3d02e74a8d5fa89
+PODFILE CHECKSUM: dc9fec3fdd4e81010ca2a3accfb1a3c22477c4a3
 
 COCOAPODS: 1.11.3

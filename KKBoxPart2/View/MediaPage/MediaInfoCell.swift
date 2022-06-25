@@ -84,7 +84,7 @@ extension MediaInfoCell: CellViewModelConfigureHandler {
         }
             titleLabel.text = media.title
             dateLabel.text = media.date.formatted(date: .numeric, time: .shortened)
-            // imgView.image
+        imgView.sd_setImage(with: media.remoteImage, completed: nil)
         }
 
 }

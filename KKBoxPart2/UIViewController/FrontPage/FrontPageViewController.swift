@@ -30,6 +30,10 @@ class FrontPageViewController: UIViewController {
         configureUI()
         binding()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.layoutTableHeaderViewIfNeeded()
@@ -57,7 +61,8 @@ class FrontPageViewController: UIViewController {
             .dropFirst()
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] album in
-                self?.headerView.imageView
+                guard let image = album?.image else { return }
+                self?.headerView.imageView.sd_setImage(with: URL(string: image), completed: nil)
             }).store(in: &bag)
         
         viewModel?.mediaList
