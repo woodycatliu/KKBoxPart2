@@ -106,7 +106,7 @@ class KKParserPublisherTest: XCTestCase {
         // MARK: Build Nativagate Case and UseCase
         let detector = Detector()
         
-        let reducer = FrontPageNavigatedReducer { [weak detector] media in
+        let reducer = FrontPageNavigatedReducer { [weak detector] media, _ in
             detector?.isGoToMediaPage = true
             detector?.mediaInfo = media
         }
@@ -138,7 +138,7 @@ class KKParserPublisherTest: XCTestCase {
         // MARK: test navigateReducer
         let media1 = mediaList!.first!
         
-        useCase.navigateReducer(.mediaInfoPage(media1), nil)
+        useCase.navigateReducer(.mediaInfoPage(media1, mediaList!), nil)
         
         XCTAssertTrue(detector.isGoToMediaPage)
         

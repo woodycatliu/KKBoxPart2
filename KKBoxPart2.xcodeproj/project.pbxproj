@@ -18,6 +18,7 @@
 		EFAD50F02864724300553B76 /* KKParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50EF2864724300553B76 /* KKParserTest.swift */; };
 		EFAD50F32864848600553B76 /* Gobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAD50F22864848600553B76 /* Gobal.swift */; };
 		EFC1D9AF2866A723002D1012 /* NavigateActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1D9AE2866A723002D1012 /* NavigateActionReducer.swift */; };
+		EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 		EFAD50EF2864724300553B76 /* KKParserTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKParserTest.swift; sourceTree = "<group>"; };
 		EFAD50F22864848600553B76 /* Gobal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gobal.swift; sourceTree = "<group>"; };
 		EFC1D9AE2866A723002D1012 /* NavigateActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigateActionReducer.swift; sourceTree = "<group>"; };
+		EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageUseCase.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				EFFB1A042865B130008FBC44 /* FrontPageUseCase.swift */,
+				EFC1D9B12866B5B3002D1012 /* MediaPageUseCase.swift */,
 			);
 			path = FrontPage;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
 				EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */,
+				EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

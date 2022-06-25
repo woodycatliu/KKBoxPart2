@@ -11,7 +11,7 @@ import Combine
 typealias FrontPageEnvionment = Any?
 
 enum FrontPageNavigatedAction {
-    case mediaInfoPage(_ media: PlayerMediaInfo)
+    case mediaInfoPage(_ media: PlayerMediaInfo, _ cache: [PlayerMediaInfo])
 }
 
 protocol FrontPageUseCase {
@@ -53,16 +53,16 @@ struct DefaultFrontPageCase: FrontPageUseCase {
     func cellDidSelected(_ indexPath: IndexPath, _ mediaList: [PlayerMediaInfo]) {
         guard mediaList.indices.contains(indexPath.row) else { return }
         let media = mediaList[indexPath.row]
-        navigateReducer(.mediaInfoPage(media), GobalPlayerContrller.shared)
+        navigateReducer(.mediaInfoPage(media, mediaList), GobalPlayerContrller.shared)
     }
 }
 
 
-let FrontPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo)->())-> NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> = { completion in
+let FrontPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo, [PlayerMediaInfo])->())-> NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> = { completion in
     return { action, _ in
         switch action {
-        case .mediaInfoPage(let media):
-            completion(media)
+        case .mediaInfoPage(let media, let list):
+            completion(media, list)
         }
     }
 }
