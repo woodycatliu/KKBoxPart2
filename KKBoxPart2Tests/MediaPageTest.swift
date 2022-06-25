@@ -14,8 +14,8 @@ class MediaPageTestt: XCTestCase {
     
     var parser: AnyCancellable?
 
-    var mediaList: [PlayerMediaInfo] = []
-    var media: PlayerMediaInfo? = nil
+    var mediaList: [Media] = []
+    var media: Media? = nil
     
     lazy var frontUseCase: DefaultFrontPageCase = {
         let reducer = FrontPageNavigatedReducer { _, _ in }
@@ -72,6 +72,21 @@ class MediaPageTestt: XCTestCase {
         detector.mediaList.removeAll()
         
         useCase.play(media!, fullList: mediaList)
+        
+        XCTAssertTrue(detector.isGoPlayerPage)
+        XCTAssertNotNil(detector.mediaInfo, "media is nil")
+        XCTAssertEqual(detector.mediaList.count, 148)
+        
+        testFirstMedia(detector.mediaInfo!)
+        
+        // MARK: test viewModel
+        detector.isGoPlayerPage = false
+        detector.mediaInfo = nil
+        detector.mediaList.removeAll()
+        
+        let viewModel = MediaPageViewModel(useCase, media: media!, fullList: mediaList)
+        
+        viewModel.play()
         
         XCTAssertTrue(detector.isGoPlayerPage)
         XCTAssertNotNil(detector.mediaInfo, "media is nil")
