@@ -15,4 +15,12 @@ protocol PlayerMediaInfo {
     var imageData: Data? { get }
     var remoteImage: URL? { get }
     var artist: String? { get }
+    var date: Date { get }
 }
+
+protocol AlbumMediaInfo {
+    var title: String? { get }
+    var image: String? { get }
+}
+
+

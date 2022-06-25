@@ -10,6 +10,8 @@ import Combine
 
 class GobalPlayerContrller: PodcastsPlayController {
     
+    static let shared: GobalPlayerContrller = GobalPlayerContrller(ModernPlayerController())
+    
     private var bag = Set<AnyCancellable>()
     
     private(set) var mediaList: CurrentValueSubject<[PlayerMediaInfo], Never> = .init([])
