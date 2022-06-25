@@ -197,6 +197,7 @@ class KKParserPublisherTest: XCTestCase {
     }
     
 }
+
 extension KKParserPublisherTest {
     class Detector {
         var mediaInfo: PlayerMediaInfo?
