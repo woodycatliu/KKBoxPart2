@@ -9,7 +9,7 @@ import UIKit
 
 extension UIView {
     
-    func fullSuperview_(_ offset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
+    func fullSuperview(_ offset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)) {
         guard let superview = superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -39,5 +39,12 @@ extension UIView {
                 centerYAnchor.constraint(equalTo: superview.centerYAnchor)
             ])
         }
+    }
+}
+
+extension UITableView {
+    func layoutTableHeaderViewIfNeeded() {
+        tableHeaderView?.layoutIfNeeded()
+        tableHeaderView = tableHeaderView
     }
 }

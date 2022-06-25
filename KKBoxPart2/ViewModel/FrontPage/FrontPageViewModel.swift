@@ -23,11 +23,13 @@ class FrontPageViewModel: FrontViewModelProtocol {
     private(set) var mediaList: CurrentValueSubject<[Media]?, Never> = .init(nil)
     
     let useCase: FrontPageUseCase
-    
-    typealias DataModelForCell = Media
-    
+        
     init(_ useCase: FrontPageUseCase) {
         self.useCase = useCase
+        DispatchQueue.main.async {
+            self.fetch()
+        }
+       
     }
     
     var numbersOfSection: Int = 1
@@ -36,7 +38,7 @@ class FrontPageViewModel: FrontViewModelProtocol {
         return mediaList.value?.count ?? 0
     }
     
-    func dataModelFoRowAt(_ indexPath: IndexPath) -> Media? {
+    func dataModelFoRowAt(_ indexPath: IndexPath) -> CellViewModelProtocol? {
         guard let mediaList = mediaList.value,
               mediaList.indices.contains(indexPath.row) else {
                   return nil

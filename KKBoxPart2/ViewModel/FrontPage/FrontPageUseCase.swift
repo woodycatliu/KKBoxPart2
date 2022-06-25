@@ -73,3 +73,4 @@ let FrontPageNavigatedReducer: (_ completion: @escaping (Media, [Media])->())-> 
 }
 
 
+

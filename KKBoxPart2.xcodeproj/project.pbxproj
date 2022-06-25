@@ -24,6 +24,9 @@
 		EFCAE0E12866E9D90074F26E /* FrontPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0E02866E9D90074F26E /* FrontPageViewModel.swift */; };
 		EFCAE0E628670FDB0074F26E /* MediaPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0E528670FDB0074F26E /* MediaPageViewModel.swift */; };
 		EFCAE0E9286714AB0074F26E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0E8286714AB0074F26E /* UIViewExtension.swift */; };
+		EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0EC28671AB40074F26E /* HeaderView.swift */; };
+		EFCAE0EF28673CC50074F26E /* MediaInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */; };
+		EFCAE0F328673F370074F26E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F228673F370074F26E /* FrontPageViewController.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -89,6 +92,9 @@
 		EFCAE0E02866E9D90074F26E /* FrontPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewModel.swift; sourceTree = "<group>"; };
 		EFCAE0E528670FDB0074F26E /* MediaPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageViewModel.swift; sourceTree = "<group>"; };
 		EFCAE0E8286714AB0074F26E /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EFCAE0EC28671AB40074F26E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoCell.swift; sourceTree = "<group>"; };
+		EFCAE0F228673F370074F26E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +208,39 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		EFCAE0EA286718390074F26E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0EB2867184D0074F26E /* MediaPage */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFCAE0EB2867184D0074F26E /* MediaPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0EC28671AB40074F26E /* HeaderView.swift */,
+				EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */,
+			);
+			path = MediaPage;
+			sourceTree = "<group>";
+		};
+		EFCAE0F028673F140074F26E /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0F128673F1D0074F26E /* FrontPage */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		EFCAE0F128673F1D0074F26E /* FrontPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0F228673F370074F26E /* FrontPageViewController.swift */,
+			);
+			path = FrontPage;
+			sourceTree = "<group>";
+		};
 		EFD2C37D28631390000C4DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +266,8 @@
 		EFD2C38828631390000C4DA4 /* KKBoxPart2 */ = {
 			isa = PBXGroup;
 			children = (
+				EFCAE0F028673F140074F26E /* UIViewController */,
+				EFCAE0EA286718390074F26E /* View */,
 				EFCAE0E72867148F0074F26E /* Extension */,
 				EFFB1A032865B118008FBC44 /* ViewModel */,
 				EFFB19ED2865498C008FBC44 /* Player */,
@@ -577,14 +618,17 @@
 				EFAD50F32864848600553B76 /* Gobal.swift in Sources */,
 				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
 				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
+				EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */,
 				EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */,
 				EFFB19EF28654997008FBC44 /* PlayerController.swift in Sources */,
 				EFFB1A0D2865BBD9008FBC44 /* Media.swift in Sources */,
 				EFFB19FE2865958A008FBC44 /* PodcastsPlayController.swift in Sources */,
+				EFCAE0EF28673CC50074F26E /* MediaInfoCell.swift in Sources */,
 				EFCAE0E12866E9D90074F26E /* FrontPageViewModel.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
 				EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */,
 				EFCAE0DF2866E9570074F26E /* ViewModelInterface.swift in Sources */,
+				EFCAE0F328673F370074F26E /* FrontPageViewController.swift in Sources */,
 				EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

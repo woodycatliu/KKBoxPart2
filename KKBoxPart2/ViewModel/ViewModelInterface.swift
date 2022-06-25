@@ -5,13 +5,12 @@
 //  Created by Woody on 2022/6/25.
 //
 
-import Foundation
+import UIKit
 
 protocol TableViewModelProtocol {
-    associatedtype DataModelForCell
     var numbersOfSection: Int { get }
     func numberOfRowsInSection(_ section: Int)-> Int
-    func dataModelFoRowAt(_ indexPath: IndexPath)-> DataModelForCell?
+    func dataModelFoRowAt(_ indexPath: IndexPath)-> CellViewModelProtocol?
 }
 
 protocol TableViewModelSelectedProtocol {
@@ -22,6 +21,6 @@ protocol CellViewModelProtocol {
     var identifier: String { get }
 }
 
-protocol CellViewModelConfigureHandler {
+protocol CellViewModelConfigureHandler: UITableViewCell {
     func configureCell(_ viewModel: CellViewModelProtocol)
 }

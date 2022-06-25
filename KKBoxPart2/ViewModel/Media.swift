@@ -25,5 +25,10 @@ struct Media: PlayerMediaInfo {
     
     var date: Date
 
-    
+}
+
+extension Media: CellViewModelProtocol {
+    var identifier: String {
+        return MediaInfoCell.description()
+    }
 }

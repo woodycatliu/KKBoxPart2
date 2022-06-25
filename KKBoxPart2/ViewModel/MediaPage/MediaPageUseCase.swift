@@ -5,7 +5,7 @@
 //  Created by Woody on 2022/6/25.
 //
 
-import Foundation
+import UIKit
 
 typealias MediaPageEnvionment = Any?
 
@@ -35,3 +35,4 @@ let MediaPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo, [Playe
         }
     }
 }
+
