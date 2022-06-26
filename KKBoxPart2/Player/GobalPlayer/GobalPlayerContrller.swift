@@ -10,6 +10,7 @@ import Combine
 
 class GobalPlayerContrller: PodcastsPlayController {
     
+    
     static let shared: GobalPlayerContrller = GobalPlayerContrller(ModernPlayerController())
     
     private var bag = Set<AnyCancellable>()
@@ -20,10 +21,10 @@ class GobalPlayerContrller: PodcastsPlayController {
     
     private(set) var pocastState: CurrentValueSubject<PocastPlayState?, Never> = .init(nil)
     
+    private(set) var currentMedia: CurrentValueSubject<PlayerMediaInfo?, Never> = .init(nil)
+
     let controller: PlayerController
-    
-    private(set) var currentMedia: PlayerMediaInfo?
-    
+        
     init(_ controller: PlayerController) {
         self.controller = controller
         binding()
@@ -71,39 +72,39 @@ class GobalPlayerContrller: PodcastsPlayController {
 extension GobalPlayerContrller {
     
     private func isNeedLoadMedia(_ id: String?)-> Bool {
-        guard let id = id,
-              let currentId = currentMedia?.id else {
-                  return false
-              }
-        return id != currentId
+        guard let id = id else { return false }
+        if let currentId = currentMedia.value?.id {
+            return id != currentId
+        }
+        return true
     }
     
     private func loadMedia(_ id: String) {
         if let index = mediaList.value.firstIndex(where: { id == $0.id }) {
             let info = mediaList.value[index]
-            currentMedia = info
-            controller.load(mediaInfo: info, isAutoStart: true)
+            currentMedia.value = info
+//            controller.load(mediaInfo: info, isAutoStart: true)
         }
     }
     
     private func nextIfNeed() {
         guard !mediaList.value.isEmpty,
-              let id = currentMedia?.id,
+              let id = currentMedia.value?.id,
               let index = mediaList.value.firstIndex(where: { id == $0.id }),
               mediaList.value.indices.contains(index + 1) else { return }
         let info = mediaList.value[index + 1]
-        currentMedia = info
-        controller.load(mediaInfo: info, isAutoStart: true)
+        currentMedia.value = info
+//        controller.load(mediaInfo: info, isAutoStart: true)
     }
     
     private func backIfNeed() {
         guard !mediaList.value.isEmpty,
-              let id = currentMedia?.id,
+              let id = currentMedia.value?.id,
               let index = mediaList.value.firstIndex(where: { id == $0.id }),
               mediaList.value.indices.contains(index - 1) else { return }
         let info = mediaList.value[index - 1]
-        currentMedia = info
-        controller.load(mediaInfo: info, isAutoStart: true)
+        currentMedia.value = info
+//        controller.load(mediaInfo: info, isAutoStart: true)
     }
     
     private func binding() {
@@ -121,6 +122,14 @@ extension GobalPlayerContrller {
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] _ in
                 self?.nextIfNeed()
+            })
+            .store(in: &bag)
+        
+        currentMedia
+            .receive(on: RunLoop.main)
+            .compactMap { $0 }
+            .sink(receiveValue: { [weak self] media in
+                self?.controller.load(mediaInfo: media, isAutoStart: true)
             })
             .store(in: &bag)
     }

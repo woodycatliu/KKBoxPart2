@@ -23,7 +23,7 @@ class ModernPlayerController: PlayerController {
     }
     
     func load(mediaInfo info: PlayerMediaInfo, isAutoStart: Bool) {
-        guard let url = URL(string: info.link) else {
+        guard let url = URL(string: info.mp3) else {
             playerState.send(.failed)
             return
         }
@@ -63,7 +63,12 @@ extension ModernPlayerController: ModernAVPlayerDelegate {
         playerState.send(PlayerState.getState(from: state))
     }
     
-    func modernAVPlayer(_ player: ModernAVPlayer, didCurrentMediaChange media: PlayerMedia?) {}
+    func modernAVPlayer(_ player: ModernAVPlayer, didCurrentMediaChange media: PlayerMedia?) {
+        guard let media = media else {
+            return
+        }
+        pocastState.value = .init(position: 0, duration: 0, pocastLink: media.url.absoluteString)
+    }
     
     func modernAVPlayer(_ player: ModernAVPlayer, didCurrentTimeChange currentTime: Double) {
         var state = pocastState.value

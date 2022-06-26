@@ -15,6 +15,8 @@ protocol PodcastsPlayController {
     
     var mediaList: CurrentValueSubject<[PlayerMediaInfo], Never> { get }
     
+    var currentMedia: CurrentValueSubject<PlayerMediaInfo?, Never> { get }
+    
     func load(mediaInfoList list: [PlayerMediaInfo], playId: String)
     // 播放偏移秒數
     func seek(offset: Double)
