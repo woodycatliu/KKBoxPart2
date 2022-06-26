@@ -36,3 +36,9 @@ let MediaPageNavigatedReducer: (_ completion: @escaping (PlayerMediaInfo, [Playe
     }
 }
 
+let CreateMediaPageTransitionCase: (UIViewController)->(PlayerMediaInfo, [PlayerMediaInfo])->() = { vc in
+    return { [weak vc] mediaInfo, list in
+        let playerVC = PlayerViewController(GobalPlayerContrller.shared, mediaInfo, list)
+        vc?.navigationController?.pushViewController(playerVC, animated: true)
+    }
+}

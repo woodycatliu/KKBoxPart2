@@ -29,6 +29,8 @@
 		EFCAE0F328673F370074F26E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F228673F370074F26E /* FrontPageViewController.swift */; };
 		EFCAE0F62867F3CC0074F26E /* MeidiaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F52867F3CC0074F26E /* MeidiaContentView.swift */; };
 		EFCAE0F92867F77F0074F26E /* MediaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */; };
+		EFCAE0FD2868072B0074F26E /* PlayerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0FC2868072B0074F26E /* PlayerContentView.swift */; };
+		EFCAE0FF286808820074F26E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0FE286808820074F26E /* PlayerViewController.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -99,6 +101,8 @@
 		EFCAE0F228673F370074F26E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
 		EFCAE0F52867F3CC0074F26E /* MeidiaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeidiaContentView.swift; sourceTree = "<group>"; };
 		EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageViewController.swift; sourceTree = "<group>"; };
+		EFCAE0FC2868072B0074F26E /* PlayerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerContentView.swift; sourceTree = "<group>"; };
+		EFCAE0FE286808820074F26E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 		EFCAE0EA286718390074F26E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EFCAE0FB286807120074F26E /* PlayerPage */,
 				EFCAE0F42867F3AA0074F26E /* MediaPage */,
 				EFCAE0EB2867184D0074F26E /* FrontPage */,
 			);
@@ -233,6 +238,7 @@
 		EFCAE0F028673F140074F26E /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EFCAE0FA2868030C0074F26E /* PlayerPage */,
 				EFCAE0F72867F7670074F26E /* MediaPage */,
 				EFCAE0F128673F1D0074F26E /* FrontPage */,
 			);
@@ -261,6 +267,22 @@
 				EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */,
 			);
 			path = MediaPage;
+			sourceTree = "<group>";
+		};
+		EFCAE0FA2868030C0074F26E /* PlayerPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0FE286808820074F26E /* PlayerViewController.swift */,
+			);
+			path = PlayerPage;
+			sourceTree = "<group>";
+		};
+		EFCAE0FB286807120074F26E /* PlayerPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0FC2868072B0074F26E /* PlayerContentView.swift */,
+			);
+			path = PlayerPage;
 			sourceTree = "<group>";
 		};
 		EFD2C37D28631390000C4DA4 = {
@@ -630,6 +652,7 @@
 				EFFB19F3286551A1008FBC44 /* State.swift in Sources */,
 				EFAD50EC286465C300553B76 /* EpisodeItem.m in Sources */,
 				EFAD50EE2864662F00553B76 /* EpisodeInfo.m in Sources */,
+				EFCAE0FF286808820074F26E /* PlayerViewController.swift in Sources */,
 				EFFB1A0B2865BB85008FBC44 /* Album.swift in Sources */,
 				EFCAE0E9286714AB0074F26E /* UIViewExtension.swift in Sources */,
 				EFFB19F128654EBD008FBC44 /* PlayerMediaInfo.swift in Sources */,
@@ -642,6 +665,7 @@
 				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
 				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
 				EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */,
+				EFCAE0FD2868072B0074F26E /* PlayerContentView.swift in Sources */,
 				EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */,
 				EFFB19EF28654997008FBC44 /* PlayerController.swift in Sources */,
 				EFFB1A0D2865BBD9008FBC44 /* Media.swift in Sources */,

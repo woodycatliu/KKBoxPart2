@@ -32,7 +32,7 @@ class MeidiaContentView: UIView {
         let lb = UILabel()
         lb.numberOfLines = 0
         lb.textAlignment = .left
-        lb.font = .systemFont(ofSize: 13)
+        lb.font = .systemFont(ofSize: 14.5)
         lb.textColor = UIColor.black
         return lb
     }()
@@ -84,7 +84,7 @@ class MeidiaContentView: UIView {
         let scroll = UIScrollView()
         scroll.bounces = true
         scroll.zoomScale = 1
-        scroll.showsVerticalScrollIndicator = false
+        scroll.showsVerticalScrollIndicator = true
         scroll.showsHorizontalScrollIndicator = false
 
         addSubview(scroll)

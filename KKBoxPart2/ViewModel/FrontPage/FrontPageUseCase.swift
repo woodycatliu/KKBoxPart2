@@ -50,7 +50,7 @@ struct DefaultFrontPageCase: FrontPageUseCase {
     func convertRssInfo(_ info: EpisodeInfo, items: [EpisodeItem]) -> (album: Album, mediaList: [Media]) {
         let album = Album(title: info.title, image: info.image)
         let mediaList = items.map {
-            Media(link: $0.link, title: $0.title, albumTitle: info.title, imageData: nil, remoteImage: URL(string: $0.image), artist: $0.summary, date: $0.date)
+            Media(mp3: $0.mp3, title: $0.title, albumTitle: info.title, imageData: nil, remoteImage: URL(string: $0.image), artist: $0.summary, date: $0.date)
         }
         return (album, mediaList)
     }
@@ -75,9 +75,9 @@ let FrontPageNavigatedReducer: (_ completion: @escaping (Media, [Media])->())-> 
 let CreateFrontTransitionCase: (UIViewController)->(Media, [Media])->() = { vc in
     return { [weak vc] media, list in
         let mediaPage = MediaPageViewController()
-        let viewModel = MediaPageViewModel(DefaultMediaPageCase(navigateReducer: MediaPageNavigatedReducer {_,_ in
-            print("DidClick")
-        }), media: media, fullList: list)
+        let transition = CreateMediaPageTransitionCase(mediaPage)
+        let useCase = DefaultMediaPageCase(navigateReducer: MediaPageNavigatedReducer(transition))
+        let viewModel = MediaPageViewModel(useCase, media: media, fullList: list)
         mediaPage.viewModel = viewModel
         vc?.navigationController?.pushViewController(mediaPage, animated: true)
     }
