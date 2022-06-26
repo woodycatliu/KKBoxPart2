@@ -20,6 +20,7 @@ class MediaInfoCell: UITableViewCell {
         let lb = UILabel()
         lb.textAlignment = .left
         lb.font = .systemFont(ofSize: 12)
+        lb.textColor = UIColor.black
         return lb
     }()
     
@@ -28,6 +29,7 @@ class MediaInfoCell: UITableViewCell {
         lb.textAlignment = .left
         lb.numberOfLines = 0
         lb.font = .systemFont(ofSize: 14.5)
+        lb.textColor = UIColor.black
         return lb
     }()
     
@@ -42,6 +44,7 @@ class MediaInfoCell: UITableViewCell {
     }
     
     private func configureUI() {
+        backgroundColor = .white
         contentView.addSubview(imgView)
         imgView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

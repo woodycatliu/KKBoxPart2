@@ -27,6 +27,8 @@
 		EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0EC28671AB40074F26E /* HeaderView.swift */; };
 		EFCAE0EF28673CC50074F26E /* MediaInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */; };
 		EFCAE0F328673F370074F26E /* FrontPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F228673F370074F26E /* FrontPageViewController.swift */; };
+		EFCAE0F62867F3CC0074F26E /* MeidiaContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F52867F3CC0074F26E /* MeidiaContentView.swift */; };
+		EFCAE0F92867F77F0074F26E /* MediaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
 		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
@@ -95,6 +97,8 @@
 		EFCAE0EC28671AB40074F26E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaInfoCell.swift; sourceTree = "<group>"; };
 		EFCAE0F228673F370074F26E /* FrontPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrontPageViewController.swift; sourceTree = "<group>"; };
+		EFCAE0F52867F3CC0074F26E /* MeidiaContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeidiaContentView.swift; sourceTree = "<group>"; };
+		EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPageViewController.swift; sourceTree = "<group>"; };
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,23 +215,25 @@
 		EFCAE0EA286718390074F26E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EFCAE0EB2867184D0074F26E /* MediaPage */,
+				EFCAE0F42867F3AA0074F26E /* MediaPage */,
+				EFCAE0EB2867184D0074F26E /* FrontPage */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		EFCAE0EB2867184D0074F26E /* MediaPage */ = {
+		EFCAE0EB2867184D0074F26E /* FrontPage */ = {
 			isa = PBXGroup;
 			children = (
 				EFCAE0EC28671AB40074F26E /* HeaderView.swift */,
 				EFCAE0EE28673CC50074F26E /* MediaInfoCell.swift */,
 			);
-			path = MediaPage;
+			path = FrontPage;
 			sourceTree = "<group>";
 		};
 		EFCAE0F028673F140074F26E /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EFCAE0F72867F7670074F26E /* MediaPage */,
 				EFCAE0F128673F1D0074F26E /* FrontPage */,
 			);
 			path = UIViewController;
@@ -239,6 +245,22 @@
 				EFCAE0F228673F370074F26E /* FrontPageViewController.swift */,
 			);
 			path = FrontPage;
+			sourceTree = "<group>";
+		};
+		EFCAE0F42867F3AA0074F26E /* MediaPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0F52867F3CC0074F26E /* MeidiaContentView.swift */,
+			);
+			path = MediaPage;
+			sourceTree = "<group>";
+		};
+		EFCAE0F72867F7670074F26E /* MediaPage */ = {
+			isa = PBXGroup;
+			children = (
+				EFCAE0F82867F77F0074F26E /* MediaPageViewController.swift */,
+			);
+			path = MediaPage;
 			sourceTree = "<group>";
 		};
 		EFD2C37D28631390000C4DA4 = {
@@ -616,6 +638,7 @@
 				EFFB19F7286571BF008FBC44 /* ModernPlayerController.swift in Sources */,
 				EFFB19FC286594EB008FBC44 /* GobalPlayerContrller.swift in Sources */,
 				EFAD50F32864848600553B76 /* Gobal.swift in Sources */,
+				EFCAE0F62867F3CC0074F26E /* MeidiaContentView.swift in Sources */,
 				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
 				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
 				EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */,
@@ -627,6 +650,7 @@
 				EFCAE0E12866E9D90074F26E /* FrontPageViewModel.swift in Sources */,
 				EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */,
 				EFFB1A0028659F32008FBC44 /* KKParserExtension.swift in Sources */,
+				EFCAE0F92867F77F0074F26E /* MediaPageViewController.swift in Sources */,
 				EFCAE0DF2866E9570074F26E /* ViewModelInterface.swift in Sources */,
 				EFCAE0F328673F370074F26E /* FrontPageViewController.swift in Sources */,
 				EFC1D9B22866B5B3002D1012 /* MediaPageUseCase.swift in Sources */,
