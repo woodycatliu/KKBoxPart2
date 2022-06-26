@@ -39,8 +39,8 @@ class MeidiaContentView: UIView {
     
     let button: UIButton = {
         let btn = UIButton()
-        btn.setBackgroundImage(UIImage(systemName: "play.circle")?.withTintColor(.systemBlue, renderingMode: .alwaysTemplate), for: .normal)
-        btn.setBackgroundImage(UIImage(systemName: "play.circle"), for: .highlighted)
+        btn.setBackgroundImage(UIImage(systemName: "play.circle"), for: .normal)
+        btn.setBackgroundImage(UIImage(systemName: "play.circle")?.sd_resizedImage(with: .init(width: 100, height: 100), scaleMode: .aspectFit)?.sd_tintedImage(with: UIColor.lightGray), for: .highlighted)
         return btn
     }()
     
@@ -76,7 +76,7 @@ class MeidiaContentView: UIView {
         addSubview(button)
         button.centerInSuperview(.x)
         NSLayoutConstraint.activate([
-            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -30),
+            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25),
             button.widthAnchor.constraint(equalTo: button.heightAnchor),
             button.widthAnchor.constraint(equalToConstant: 130)
         ])
