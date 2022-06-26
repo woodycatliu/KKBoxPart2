@@ -72,5 +72,10 @@ let FrontPageNavigatedReducer: (_ completion: @escaping (Media, [Media])->())-> 
     }
 }
 
-
+let CreateFrontTransitionCase: (UIViewController)->(Media, [Media])->() = { vc in
+    return { [weak vc] media, list in
+        let mediaPage = ViewController()
+        vc?.navigationController?.pushViewController(mediaPage, animated: true)
+    }
+}
 

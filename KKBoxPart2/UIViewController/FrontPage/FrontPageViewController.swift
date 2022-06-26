@@ -49,10 +49,7 @@ class FrontPageViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        let reducer = FrontPageNavigatedReducer { [weak self] media, list in
-            self?.navigationController?.pushViewController(ViewController(), animated: true)
-        }
-        let useCase = DefaultFrontPageCase(navigateReducer: reducer)
+        let useCase = DefaultFrontPageCase(navigateReducer: FrontPageNavigatedReducer(CreateFrontTransitionCase(self)))
         viewModel = FrontPageViewModel(useCase)
     }
     
