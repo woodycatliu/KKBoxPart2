@@ -13,7 +13,7 @@ class PlayerViewController: UIViewController {
     private var bag = Set<AnyCancellable>()
     
     let contentView: PlayerContentView = PlayerContentView()
-        
+    
     var playerControll: PodcastsPlayController?
     
     var isNotBuffering : Bool = true
@@ -45,7 +45,7 @@ class PlayerViewController: UIViewController {
         contentView.backBtn.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
         contentView.nextBtn.addTarget(self, action: #selector(nextBtnAction), for: .touchUpInside)
     }
-
+    
     private func binding() {
         
         playerControll?.currentMedia
@@ -125,5 +125,5 @@ class PlayerViewController: UIViewController {
     @objc private func backBtnAction() {
         playerControll?.back()
     }
-
+    
 }

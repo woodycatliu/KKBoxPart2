@@ -85,8 +85,8 @@ extension MediaInfoCell: CellViewModelConfigureHandler {
         guard let media = viewModel as? Media else {
             fatalError("CellViewModel can not as Media")
         }
-            titleLabel.text = media.title
-            dateLabel.text = media.date.formatted(date: .numeric, time: .shortened)
+        titleLabel.text = media.title
+        dateLabel.text = MediaFormater.string(from: media.date)
         imgView.sd_setImage(with: media.remoteImage, completed: nil)
         }
 

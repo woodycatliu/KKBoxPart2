@@ -48,3 +48,21 @@ extension UITableView {
         tableHeaderView = tableHeaderView
     }
 }
+
+extension UIActivityIndicatorView {
+    static func Configure(_ isShow: Bool, _ view: UIView) {
+        if isShow {
+            let ac = UIActivityIndicatorView()
+            ac.style = .large
+            ac.tag = 9999
+            ac.tintColor = UIColor.gray
+            ac.backgroundColor = .white
+            view.addSubview(ac)
+            ac.fullSuperview()
+            ac.startAnimating()
+            view.bringSubviewToFront(ac)
+            return
+        }
+        view.viewWithTag(9999)?.removeFromSuperview()
+    }
+}

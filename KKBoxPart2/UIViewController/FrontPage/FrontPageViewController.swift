@@ -61,12 +61,21 @@ class FrontPageViewController: UIViewController {
                 guard let image = album?.image else { return }
                 self?.headerView.imageView.sd_setImage(with: URL(string: image), completed: nil)
             }).store(in: &bag)
-        
+
         viewModel?.mediaList
             .dropFirst()
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] _ in
                 self?.tableView.reloadData()
+            })
+            .store(in: &bag)
+        
+        // set loading view
+        viewModel?.mediaList
+            .map { $0 == nil }
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [unowned self] in
+                UIActivityIndicatorView.Configure($0, self.view)
             })
             .store(in: &bag)
     }

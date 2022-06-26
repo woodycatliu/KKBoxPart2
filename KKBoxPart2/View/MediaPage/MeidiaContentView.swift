@@ -76,9 +76,9 @@ class MeidiaContentView: UIView {
         addSubview(button)
         button.centerInSuperview(.x)
         NSLayoutConstraint.activate([
-            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -25),
+            button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             button.widthAnchor.constraint(equalTo: button.heightAnchor),
-            button.widthAnchor.constraint(equalToConstant: 130)
+            button.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4)
         ])
         
         let scroll = UIScrollView()
@@ -93,7 +93,7 @@ class MeidiaContentView: UIView {
             scroll.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 13),
             scroll.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             scroll.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-            scroll.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -10)
+            scroll.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -3)
         ])
         
         scroll.addSubview(summaryLabel)
@@ -112,7 +112,6 @@ extension MeidiaContentView {
     
     func setData(_ media: Media?) {
         guard let media = media else { return }
-        
         titleLabel.text = media.title
         summaryLabel.text = media.artist
         imageView.sd_setImage(with: media.remoteImage, completed: nil)

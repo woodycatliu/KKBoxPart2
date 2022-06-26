@@ -83,7 +83,6 @@ extension GobalPlayerContrller {
         if let index = mediaList.value.firstIndex(where: { id == $0.id }) {
             let info = mediaList.value[index]
             currentMedia.value = info
-//            controller.load(mediaInfo: info, isAutoStart: true)
         }
     }
     
@@ -94,7 +93,6 @@ extension GobalPlayerContrller {
               mediaList.value.indices.contains(index + 1) else { return }
         let info = mediaList.value[index + 1]
         currentMedia.value = info
-//        controller.load(mediaInfo: info, isAutoStart: true)
     }
     
     private func backIfNeed() {
@@ -104,7 +102,6 @@ extension GobalPlayerContrller {
               mediaList.value.indices.contains(index - 1) else { return }
         let info = mediaList.value[index - 1]
         currentMedia.value = info
-//        controller.load(mediaInfo: info, isAutoStart: true)
     }
     
     private func binding() {

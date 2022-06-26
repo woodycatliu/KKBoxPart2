@@ -26,7 +26,7 @@ class FrontPageViewModel: FrontViewModelProtocol {
         
     init(_ useCase: FrontPageUseCase) {
         self.useCase = useCase
-        DispatchQueue.main.async {
+        DispatchQueue.global().async {
             self.fetch()
         }
        

@@ -28,8 +28,10 @@ class PlayerContentView: UIView {
     }()
     
     let sliderBar: UISlider = {
-        let sb = UISlider()
+        let sb = CustomSlder()
         sb.isContinuous = false
+        sb.minimumTrackTintColor = UIColor(red: 168 / 255, green: 219 / 255, blue: 251 / 255, alpha: 1)
+        sb.thumbTintColor = .white.withAlphaComponent(0.5)
         return sb
     }()
     
@@ -145,3 +147,12 @@ extension PlayerContentView {
     }
 }
 
+
+
+class CustomSlder: UISlider {
+    override func trackRect(forBounds bounds: CGRect) -> CGRect {
+        var bounds = super.trackRect(forBounds: bounds)
+        bounds.size.height = 12
+        return bounds
+    }
+}
