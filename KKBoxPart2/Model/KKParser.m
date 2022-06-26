@@ -69,8 +69,9 @@
         ei.summary = item.summary;
         ei.image = item.image;
         ei.author = item.author;
-        ei.link = item.link;
-        
+        if (item.enclosures && item.enclosures.count != 0 && [item.enclosures[0] objectForKey:@"url"]) {
+            ei.mp3 = [item.enclosures[0] objectForKey:@"url"];
+        }
         if (self.items) {
             self.items = [self.items arrayByAddingObject:ei];
         }

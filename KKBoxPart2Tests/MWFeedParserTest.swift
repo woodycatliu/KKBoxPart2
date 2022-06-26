@@ -59,7 +59,7 @@ class MWFeedParserTest: XCTestCase {
         XCTAssertEqual(item1.image!, "https://i1.sndcdn.com/artworks-Z7zJRFuDjv63KCHv-5W8whA-t3000x3000.jpg")
         XCTAssertNotNil(item1.summary, "item summary is nil")
         XCTAssertTrue(item1.summary.contains("在這個最後的 Q&A 特輯中，兩位主持人回答聽眾對科技島讀與 podcast 最感興趣的問題。題目涵蓋寫作方法、發展特色、身心平衡，以及給迷惘的人的建議。 科技島讀 podcast 歷時 4 年。周欽華要特別感謝盧郁青擔任共同主持人，一起同甘共苦。謝謝房首伊與賴佳翎認真負責，是可靠的後援。謝謝工程師 Joe"))
-
+        print(item1.enclosures)
         
         let item148 = items.last!
         XCTAssertNotNil(item148.title, "item title is nil")

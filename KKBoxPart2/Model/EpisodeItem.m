@@ -13,7 +13,7 @@
 
 @implementation EpisodeItem
 
-@synthesize title, date, summary, author, image, link;
+@synthesize title, date, summary, author, image, mp3;
 
 
 - (NSString *)description {
@@ -25,17 +25,17 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     if (title) [encoder encodeObject:title forKey:@"title"];
-    if (link) [encoder encodeObject:link forKey:@"link"];
+    if (mp3) [encoder encodeObject:mp3 forKey:@"mp3"];
     if (summary) [encoder encodeObject:title forKey:@"summary"];
     if (image) [encoder encodeObject:title forKey:@"image"];
-    if (date) [encoder encodeObject:link forKey:@"date"];
+    if (date) [encoder encodeObject:date forKey:@"date"];
     if (author) [encoder encodeObject:title forKey:@"author"];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder {
     if ((self = [super init])) {
         title = [decoder decodeObjectForKey:@"title"];
-        link = [decoder decodeObjectForKey:@"link"];
+        mp3 = [decoder decodeObjectForKey:@"mp3"];
         summary = [decoder decodeObjectForKey:@"summary"];
         image = [decoder decodeObjectForKey:@"image"];
         date = [decoder decodeObjectForKey:@"date"];
@@ -53,7 +53,7 @@
         copy.author = author.copy;
         copy.image = image.copy;
         copy.summary = summary.copy;
-        copy.link = link.copy;
+        copy.mp3 = mp3.copy;
     }
     return  copy;
 }

@@ -101,7 +101,7 @@ class MediaPageTestt: XCTestCase {
         XCTAssertEqual(media.title!, "SP. 科技島讀請回答")
         XCTAssertNotNil(media.date, "item date is nil")
         XCTAssertNotNil(media.link, "item link is nil")
-        XCTAssertEqual(media.link, "https://soundcloud.com/daodutech/podcast-please-answer-daodu-tech")
+        XCTAssertEqual(media.link, "https://feeds.soundcloud.com/stream/1062984568-daodutech-podcast-please-answer-daodu-tech.mp3")
         XCTAssertNotNil(media.remoteImage, "item image is nil")
         XCTAssertEqual(media.remoteImage!.absoluteString, "https://i1.sndcdn.com/artworks-Z7zJRFuDjv63KCHv-5W8whA-t3000x3000.jpg")
         XCTAssertNotNil(media.artist, "item summary is nil")

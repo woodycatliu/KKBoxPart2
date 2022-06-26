@@ -14,7 +14,7 @@
     NSString *author;
     NSString *image;
     NSString *summary;
-    NSString *link;
+    NSString *mp3;
 }
 
 @property (nonatomic, copy) NSString *title;
@@ -22,7 +22,7 @@
 @property (nonatomic, copy) NSString *author;
 @property (nonatomic, copy) NSString *image;
 @property (nonatomic, copy) NSString *summary;
-@property (nonatomic, copy) NSString *link;
+@property (nonatomic, copy) NSString *mp3;
 
 
 @end
