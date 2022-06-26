@@ -9,7 +9,7 @@ import Foundation
 
 protocol PlayerMediaInfo {
     var id: String { get }
-    var link: String { get }
+    var mp3: String { get }
     var title: String? { get }
     var albumTitle: String? { get }
     var imageData: Data? { get }

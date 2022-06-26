@@ -11,7 +11,7 @@ struct Media: PlayerMediaInfo {
     
     var id: String = UUID().uuidString
     
-    var link: String
+    var mp3: String
     
     var title: String?
     
