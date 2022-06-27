@@ -73,6 +73,10 @@ extension ModernPlayerController: ModernAVPlayerDelegate {
     func modernAVPlayer(_ player: ModernAVPlayer, didCurrentTimeChange currentTime: Double) {
         var state = pocastState.value
         state?.position = currentTime
+        if let duration = state?.duration,
+           duration < currentTime {
+            state?.position = duration
+        }
         pocastState.send(state)
     }
     
