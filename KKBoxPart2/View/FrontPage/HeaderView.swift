@@ -15,6 +15,7 @@ class HeaderView: UIView {
         iv.layer.masksToBounds = true
         return iv
     }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()

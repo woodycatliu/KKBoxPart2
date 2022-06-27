@@ -33,6 +33,7 @@ class FrontPageViewController: UIViewController {
        fetch()
        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -44,6 +45,7 @@ class FrontPageViewController: UIViewController {
     }
     
     private func configureUI() {
+        view.backgroundColor = .white
         view.addSubview(tableView)
         tableView.fullSuperview()
         tableView.tableHeaderView = headerView

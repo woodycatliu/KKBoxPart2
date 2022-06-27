@@ -28,7 +28,7 @@ class PlayerContentView: UIView {
     }()
     
     let sliderBar: UISlider = {
-        let sb = CustomSlder()
+        let sb = CustomSlider()
         sb.isContinuous = false
         sb.minimumTrackTintColor = UIColor(red: 168 / 255, green: 219 / 255, blue: 251 / 255, alpha: 1)
         sb.thumbTintColor = .white.withAlphaComponent(0.5)
@@ -66,13 +66,12 @@ class PlayerContentView: UIView {
     }
     
     private func confiugreUI() {
-        
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor, constant: 7.5),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
         ])
         
@@ -147,9 +146,7 @@ extension PlayerContentView {
     }
 }
 
-
-
-class CustomSlder: UISlider {
+class CustomSlider: UISlider {
     override func trackRect(forBounds bounds: CGRect) -> CGRect {
         var bounds = super.trackRect(forBounds: bounds)
         bounds.size.height = 12

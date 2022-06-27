@@ -11,9 +11,9 @@ class MeidiaContentView: UIView {
     
     let titleLabel: UILabel = {
         let lb = UILabel()
-        lb.numberOfLines = 2
+        lb.numberOfLines = 3
         lb.textAlignment = .left
-        lb.font = .systemFont(ofSize: 20)
+        lb.font = .systemFont(ofSize: 18)
         lb.textColor = UIColor.black
         return lb
     }()
@@ -54,13 +54,12 @@ class MeidiaContentView: UIView {
     }
    
     private func confiugreUI() {
-        
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor, constant: 7.5),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 18),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -18),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
         ])
         

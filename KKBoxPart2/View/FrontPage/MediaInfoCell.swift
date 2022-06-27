@@ -14,7 +14,7 @@ class MediaInfoCell: UITableViewCell {
         iv.layer.cornerRadius = 2
         iv.layer.masksToBounds = true
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .systemGray5
+        iv.backgroundColor = .gray.withAlphaComponent(0.5)
         return iv
     }()
 
@@ -76,7 +76,6 @@ class MediaInfoCell: UITableViewCell {
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             titleLabel.bottomAnchor.constraint(lessThanOrEqualTo: dateLabel.topAnchor, constant: -3)
         ])
-        
     }
 
 }

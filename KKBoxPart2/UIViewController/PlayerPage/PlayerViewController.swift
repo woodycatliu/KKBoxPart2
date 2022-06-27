@@ -36,6 +36,7 @@ class PlayerViewController: UIViewController {
     }
     
     private func confiugreUI() {
+        view.backgroundColor = .white
         view.addSubview(contentView)
         view.backgroundColor = .white
         contentView.fullSuperview()
@@ -47,7 +48,6 @@ class PlayerViewController: UIViewController {
     }
     
     private func binding() {
-        
         playerControll?.currentMedia
             .receive(on: RunLoop.main)
             .sink(receiveValue: contentView.setData(_:))
@@ -86,7 +86,6 @@ class PlayerViewController: UIViewController {
     }
     
     @objc private func silderAction(_ silder: UISlider) {
-        print("silder:", silder.value)
         playerControll?.seek(position: Double(silder.value))
     }
     

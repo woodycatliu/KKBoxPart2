@@ -28,6 +28,7 @@ class MediaPageViewController: UIViewController {
     }
     
     private func confiugreUI() {
+        view.backgroundColor = .white
         view.addSubview(contentView)
         view.backgroundColor = .white
         contentView.fullSuperview()
