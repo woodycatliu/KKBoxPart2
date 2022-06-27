@@ -56,6 +56,24 @@ class PlayerContentView: UIView {
         return btn
     }()
     
+    let positionLabel: UILabel = {
+        let lb = UILabel()
+        lb.numberOfLines = 1
+        lb.textAlignment = .left
+        lb.font = .systemFont(ofSize: 10)
+        lb.textColor = UIColor.lightGray
+        return lb
+    }()
+    
+    let duractionLabel: UILabel = {
+        let lb = UILabel()
+        lb.numberOfLines = 1
+        lb.textAlignment = .right
+        lb.font = .systemFont(ofSize: 10)
+        lb.textColor = UIColor.lightGray
+        return lb
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         confiugreUI()
@@ -108,6 +126,22 @@ class PlayerContentView: UIView {
             sliderBar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
             sliderBar.heightAnchor.constraint(equalToConstant: 40),
             sliderBar.bottomAnchor.constraint(equalTo: playBtn.topAnchor, constant: -10)
+        ])
+        
+        addSubview(positionLabel)
+        positionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            positionLabel.topAnchor.constraint(equalTo: sliderBar.bottomAnchor),
+            positionLabel.leadingAnchor.constraint(equalTo: sliderBar.leadingAnchor),
+            positionLabel.heightAnchor.constraint(equalToConstant: 11),
+        ])
+        
+        addSubview(duractionLabel)
+        duractionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            duractionLabel.topAnchor.constraint(equalTo: sliderBar.bottomAnchor),
+            duractionLabel.trailingAnchor.constraint(equalTo: sliderBar.trailingAnchor),
+            duractionLabel.heightAnchor.constraint(equalToConstant: 11),
         ])
         
         let scroll = UIScrollView()

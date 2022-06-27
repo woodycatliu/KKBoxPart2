@@ -55,7 +55,7 @@ extension UIActivityIndicatorView {
             let ac = UIActivityIndicatorView()
             ac.style = .large
             ac.tag = 9999
-            ac.tintColor = UIColor.gray
+            ac.tintColor = UIColor.black
             ac.backgroundColor = .white
             view.addSubview(ac)
             ac.fullSuperview()

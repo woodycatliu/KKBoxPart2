@@ -41,7 +41,8 @@ class PlayerViewController: UIViewController {
         view.backgroundColor = .white
         contentView.fullSuperview()
         
-        contentView.sliderBar.addTarget(self, action: #selector(silderAction), for: .valueChanged)
+        contentView.sliderBar.addTarget(self, action: #selector(seedAction), for: .valueChanged)
+        contentView.sliderBar.addTarget(self, action: #selector(positionChange), for: .allTouchEvents)
         contentView.playBtn.addTarget(self, action: #selector(playBtnAction), for: .touchUpInside)
         contentView.backBtn.addTarget(self, action: #selector(backBtnAction), for: .touchUpInside)
         contentView.nextBtn.addTarget(self, action: #selector(nextBtnAction), for: .touchUpInside)
@@ -65,8 +66,10 @@ class PlayerViewController: UIViewController {
                       !self.contentView.sliderBar.isHighlighted else { return }
                 if self.contentView.sliderBar.maximumValue != Float(state.duration) {
                     self.contentView.sliderBar.maximumValue = Float(state.duration)
+                    self.contentView.duractionLabel.text = state.duration.getMinAndSec
                 }
                 self.contentView.sliderBar.setValue(Float(state.position), animated: true)
+                self.contentView.positionLabel.text = state.position.getMinAndSec
             })
             .store(in: &bag)
         
@@ -85,8 +88,12 @@ class PlayerViewController: UIViewController {
         
     }
     
-    @objc private func silderAction(_ silder: UISlider) {
-        playerControll?.seek(position: Double(silder.value))
+    @objc private func seedAction(_ slider: UISlider) {
+        playerControll?.seek(position: Double(slider.value))
+    }
+    
+    @objc private func positionChange(_ slider: UISlider) {
+        contentView.positionLabel.text = Double(slider.value).getMinAndSec
     }
     
     private func changePlayBtn(_ state: PlayerState) {
