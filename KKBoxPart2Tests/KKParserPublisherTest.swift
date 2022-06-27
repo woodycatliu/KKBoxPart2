@@ -21,9 +21,11 @@ class KKParserPublisherTest: XCTestCase {
 
     var mediaList: CurrentValueSubject<[Media]?, Never> = .init(nil)
     
+    var url: URL!
+    
     override func setUp() {
         super.setUp()
-        let url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
+        url = try! XCTUnwrap(Bundle(for: type(of: self)).url(forResource: "sounds", withExtension: "rss"))
         let ext = expectation(description: "Test KKParserPublisherTest")
         KKParser.publish(url)
             .sink(receiveCompletion: { _ in },
@@ -36,6 +38,7 @@ class KKParserPublisherTest: XCTestCase {
     }
     
     override func tearDown() {
+        url = nil
         bag.removeAll()
         info = nil
         album.value = nil
@@ -43,7 +46,6 @@ class KKParserPublisherTest: XCTestCase {
         items.removeAll()
         super.tearDown()
     }
-    
 
     func test_EpisodeInfo() {
         XCTAssertNotNil(info.link, "link is nil")
@@ -87,7 +89,6 @@ class KKParserPublisherTest: XCTestCase {
         XCTAssertTrue(item148.summary.contains("科技島讀第一次的島聚，邀請到創夢市集負責人以及遊戲產業電子報「曼不經心的遊戲評論」創辦人李易鴻一同對談遊戲的迷人之處"))
     }
     
-    
     func test_Album() {
         XCTAssertNotNil(info.link, "link is nil")
         XCTAssertEqual(info.link!, "https://daodu.tech")
@@ -95,8 +96,8 @@ class KKParserPublisherTest: XCTestCase {
         XCTAssertEqual(info.summary!, "科技島讀是會員制媒體，專注於分析國際事件，解讀科技、商業與社會趨勢。我們從台灣出發，因此取名「島」讀。")
         XCTAssertNotNil(info.image, "image is nil")
         XCTAssertEqual(info.image!, "https://i1.sndcdn.com/avatars-000326154119-ogb1ma-original.jpg")
-        
     }
+    
     func test_FrontUseCase() {
         
         var detectorAlbum: Album
@@ -189,7 +190,6 @@ class KKParserPublisherTest: XCTestCase {
         let viewModel = FrontPageViewModel(useCase)
         let vmex = expectation(description: "Test ViewModel")
         vmex.expectedFulfillmentCount = 2
-
         viewModel.album
             .dropFirst()
             .sink(receiveValue: { [weak self] album in
@@ -206,8 +206,8 @@ class KKParserPublisherTest: XCTestCase {
                 self?.testFirstMedia(list?.first!)
                 vmex.fulfill()
             }).store(in: &bag)
-        
-        viewModel.fetch()
+        viewModel.fetch(url: url)
+
         waitForExpectations(timeout: 0.5, handler: nil)
         let count = viewModel.numberOfRowsInSection(0)
         XCTAssertEqual(count, 148)
@@ -226,7 +226,6 @@ class KKParserPublisherTest: XCTestCase {
         testFirstMedia(detector.mediaInfo!)
     }
     
-    
     func testAlbum(_ album: AlbumMediaInfo) {
         XCTAssertNotNil(album.image, "image is nil")
         XCTAssertEqual(album.image!, "https://i1.sndcdn.com/avatars-000326154119-ogb1ma-original.jpg")
@@ -241,16 +240,14 @@ class KKParserPublisherTest: XCTestCase {
         
         let media148 = mediaList.last!
         testLastMedia(media148)
-        
     }
-    
     
     func testFirstMedia(_ media: PlayerMediaInfo!) {
         XCTAssertNotNil(media.title, "item title is nil")
         XCTAssertEqual(media.title!, "SP. 科技島讀請回答")
         XCTAssertNotNil(media.date, "item date is nil")
-        XCTAssertNotNil(media.link, "item link is nil")
-        XCTAssertEqual(media.link, "https://feeds.soundcloud.com/stream/1062984568-daodutech-podcast-please-answer-daodu-tech.mp3")
+        XCTAssertNotNil(media.mp3, "item link is nil")
+        XCTAssertEqual(media.mp3, "https://feeds.soundcloud.com/stream/1062984568-daodutech-podcast-please-answer-daodu-tech.mp3")
         XCTAssertNotNil(media.remoteImage, "item image is nil")
         XCTAssertEqual(media.remoteImage!.absoluteString, "https://i1.sndcdn.com/artworks-Z7zJRFuDjv63KCHv-5W8whA-t3000x3000.jpg")
         XCTAssertNotNil(media.artist, "item summary is nil")
@@ -260,8 +257,8 @@ class KKParserPublisherTest: XCTestCase {
     func testLastMedia(_ media: PlayerMediaInfo!) {
         XCTAssertNotNil(media.title, "item title is nil")
         XCTAssertEqual(media.title!, "Ep.01 比手機更迷人的世界：遊戲")
-        XCTAssertNotNil(media.link, "item link is nil")
-        XCTAssertEqual(media.link, "https://feeds.soundcloud.com/stream/335052773-daodutech-vr4bkoas3ort.mp3")
+        XCTAssertNotNil(media.mp3, "item link is nil")
+        XCTAssertEqual(media.mp3, "https://feeds.soundcloud.com/stream/335052773-daodutech-vr4bkoas3ort.mp3")
         XCTAssertNotNil(media.remoteImage, "item image is nil")
         XCTAssertEqual(media.remoteImage!.absoluteString, "https://i1.sndcdn.com/artworks-000235417599-6vthgf-t3000x3000.jpg")
         XCTAssertNotNil(media.artist, "item summary is nil")
@@ -275,5 +272,4 @@ extension KKParserPublisherTest {
         var mediaInfo: PlayerMediaInfo?
         var isGoToMediaPage = false
     }
-    
 }

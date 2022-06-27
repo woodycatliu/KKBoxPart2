@@ -20,7 +20,6 @@ class MediaPageViewModel: MediaPageViewModelProtocol {
     
     private var fullList: [Media] = []
 
-    
     init(_ useCase: MediaPageUseCase, media: Media, fullList: [Media]) {
         self.useCase = useCase
         self.fullList = fullList

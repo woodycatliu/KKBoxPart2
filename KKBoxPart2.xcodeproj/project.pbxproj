@@ -33,7 +33,6 @@
 		EFCAE0FF286808820074F26E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCAE0FE286808820074F26E /* PlayerViewController.swift */; };
 		EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38928631390000C4DA4 /* AppDelegate.swift */; };
 		EFD2C38C28631390000C4DA4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */; };
-		EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2C38D28631390000C4DA4 /* ViewController.swift */; };
 		EFD2C39128631390000C4DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD2C38F28631390000C4DA4 /* Main.storyboard */; };
 		EFD2C39328631391000C4DA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD2C39228631391000C4DA4 /* Assets.xcassets */; };
 		EFD2C39628631391000C4DA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD2C39428631391000C4DA4 /* LaunchScreen.storyboard */; };
@@ -106,7 +105,6 @@
 		EFD2C38628631390000C4DA4 /* KKBoxPart2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKBoxPart2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD2C38928631390000C4DA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFD2C38D28631390000C4DA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EFD2C39028631390000C4DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFD2C39228631391000C4DA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD2C39528631391000C4DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 				EFD2C3BA28631561000C4DA4 /* Model */,
 				EFD2C38928631390000C4DA4 /* AppDelegate.swift */,
 				EFD2C38B28631390000C4DA4 /* SceneDelegate.swift */,
-				EFD2C38D28631390000C4DA4 /* ViewController.swift */,
 				EFD2C38F28631390000C4DA4 /* Main.storyboard */,
 				EFD2C39228631391000C4DA4 /* Assets.xcassets */,
 				EFD2C39428631391000C4DA4 /* LaunchScreen.storyboard */,
@@ -663,7 +660,6 @@
 				EFAD50F32864848600553B76 /* Gobal.swift in Sources */,
 				EFCAE0F62867F3CC0074F26E /* MeidiaContentView.swift in Sources */,
 				EFAD50EA2864652A00553B76 /* KKParser.m in Sources */,
-				EFD2C38E28631390000C4DA4 /* ViewController.swift in Sources */,
 				EFCAE0ED28671AB40074F26E /* HeaderView.swift in Sources */,
 				EFCAE0FD2868072B0074F26E /* PlayerContentView.swift in Sources */,
 				EFD2C38A28631390000C4DA4 /* AppDelegate.swift in Sources */,

@@ -37,7 +37,6 @@ extension FrontPageUseCase {
     }
 }
 
-
 struct DefaultFrontPageCase: FrontPageUseCase {
     
     /// output: (EpisodeInfo, [EpisodeItem])
@@ -61,7 +60,6 @@ struct DefaultFrontPageCase: FrontPageUseCase {
         navigateReducer(.mediaInfoPage(media, mediaList), GobalPlayerContrller.shared)
     }
 }
-
 
 let FrontPageNavigatedReducer: (_ completion: @escaping (Media, [Media])->())-> NavigatedCaseReducer<FrontPageNavigatedAction, FrontPageEnvionment> = { completion in
     return { action, _ in

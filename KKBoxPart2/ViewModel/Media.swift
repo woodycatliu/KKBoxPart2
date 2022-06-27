@@ -27,8 +27,9 @@ struct Media: PlayerMediaInfo {
 
 }
 
-extension Media: CellViewModelProtocol {
+struct MediaCellViewModel: CellViewModelProtocol {
     var identifier: String {
         return MediaInfoCell.description()
     }
+    var media: Media
 }

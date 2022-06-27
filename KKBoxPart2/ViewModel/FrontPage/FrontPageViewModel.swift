@@ -6,12 +6,14 @@
 //
 
 import Combine
+import Foundation
 
 typealias FrontPageCell = CellViewModelProtocol
 
 protocol FrontViewModelProtocol: TableViewModelProtocol, TableViewModelSelectedProtocol {
     var album: CurrentValueSubject<Album?, Never> { get }
     var mediaList: CurrentValueSubject<[Media]?, Never> { get }
+    func fetch(url: URL?)
 }
 
 class FrontPageViewModel: FrontViewModelProtocol {
@@ -26,10 +28,6 @@ class FrontPageViewModel: FrontViewModelProtocol {
         
     init(_ useCase: FrontPageUseCase) {
         self.useCase = useCase
-        DispatchQueue.global().async {
-            self.fetch()
-        }
-       
     }
     
     var numbersOfSection: Int = 1
@@ -43,7 +41,7 @@ class FrontPageViewModel: FrontViewModelProtocol {
               mediaList.indices.contains(indexPath.row) else {
                   return nil
               }
-        return mediaList[indexPath.row]
+        return MediaCellViewModel(media: mediaList[indexPath.row])
     }
     
     func didSelectedCell(_ indexPath: IndexPath) {
@@ -57,8 +55,8 @@ class FrontPageViewModel: FrontViewModelProtocol {
 
 extension FrontPageViewModel {
     
-    func fetch() {
-        guard let url = URL(string: Domain) else { return }
+    func fetch(url: URL?) {
+        guard let url = url else { return }
         useCase.fetchRss(url)
             .map {[unowned self] in return self.useCase.convertRssInfo($0.0, items: $0.1)}
             .sink(receiveCompletion: { _ in }, receiveValue: { [unowned self] in

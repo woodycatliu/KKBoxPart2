@@ -20,6 +20,7 @@ class FrontPageViewController: UIViewController {
         let tv = UITableView()
         tv.delegate = self
         tv.dataSource = self
+        tv.separatorInset = .init(top: 0, left: 10, bottom: 0, right: 10)
         tv.register(MediaInfoCell.self, forCellReuseIdentifier: MediaInfoCell.description())
         return tv
     }()
@@ -29,6 +30,8 @@ class FrontPageViewController: UIViewController {
         configureViewModel()
         configureUI()
         binding()
+       fetch()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -78,6 +81,12 @@ class FrontPageViewController: UIViewController {
                 UIActivityIndicatorView.Configure($0, self.view)
             })
             .store(in: &bag)
+    }
+    
+    private func fetch() {
+        DispatchQueue.global().async {
+            self.viewModel?.fetch(url: URL(string: Domain))
+        }
     }
  
 }

@@ -11,6 +11,8 @@ class MediaInfoCell: UITableViewCell {
     
     let imgView: UIImageView = {
         let iv = UIImageView()
+        iv.layer.cornerRadius = 2
+        iv.layer.masksToBounds = true
         iv.contentMode = .scaleAspectFill
         iv.backgroundColor = .systemGray5
         return iv
@@ -82,9 +84,10 @@ class MediaInfoCell: UITableViewCell {
 extension MediaInfoCell: CellViewModelConfigureHandler {
     
     func configureCell(_ viewModel: CellViewModelProtocol) {
-        guard let media = viewModel as? Media else {
+        guard let viewModel = viewModel as? MediaCellViewModel else {
             fatalError("CellViewModel can not as Media")
         }
+        let media = viewModel.media
         titleLabel.text = media.title
         dateLabel.text = MediaFormater.string(from: media.date)
         imgView.sd_setImage(with: media.remoteImage, completed: nil)
