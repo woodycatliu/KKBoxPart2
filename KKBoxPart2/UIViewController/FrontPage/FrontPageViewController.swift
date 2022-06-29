@@ -30,8 +30,7 @@ class FrontPageViewController: UIViewController {
         configureViewModel()
         configureUI()
         binding()
-       fetch()
-       
+        fetch()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,7 +65,7 @@ class FrontPageViewController: UIViewController {
                 guard let image = album?.image else { return }
                 self?.headerView.imageView.sd_setImage(with: URL(string: image), completed: nil)
             }).store(in: &bag)
-
+        
         viewModel?.mediaList
             .dropFirst()
             .receive(on: RunLoop.main)
@@ -90,7 +89,7 @@ class FrontPageViewController: UIViewController {
             self.viewModel?.fetch(url: URL(string: Domain))
         }
     }
- 
+    
 }
 
 // MARK: UITableViewDataSource
@@ -108,12 +107,12 @@ extension FrontPageViewController: UITableViewDataSource {
         cell.configureCell(cellViewModel)
         return cell
     }
-
+    
 }
 
 // MARK: UITableViewDelegate
 extension FrontPageViewController: UITableViewDelegate {
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.didSelectedCell(indexPath)
     }
